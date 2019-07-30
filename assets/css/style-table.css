@@ -1,0 +1,42 @@
+table{
+  width: 100%;
+}
+.tabel-data{
+  margin-top: 30px;
+  border : 1px solid #CCC;
+}
+.tabel-data #rata-tengah{
+  text-align: center;
+}
+.tabel-data th{
+  background-color: #27ae60;
+  color: #ffffff;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border : 1px solid #CCC;
+}
+.tabel-data th, .tabel-data td{
+  text-align: center;
+  border : 1px solid #CCC;
+}
+
+.tabel-data td{
+  padding: 10px;
+  font-size: 15px;
+  text-align: left;
+  vertical-align: top;
+}
+
+#no{
+  text-align: center;
+}
+
+
+tfoot .bawah td{
+  background-color: #27ae60;
+  color: #fff;
+  text-transform: uppercase;  
+  padding: 10px;
+  font-weight: bold;
+}
