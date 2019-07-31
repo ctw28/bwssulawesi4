@@ -11,7 +11,7 @@
   <link href="<?php echo base_url()?>assets/css/style2.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
 
             <!-- HEADER TOP -->
@@ -98,33 +98,32 @@
                     </ul>
                 </div>
             </nav>
-
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+</div>
             <section class="col-12 content">
                 <div class="row">
 
                 <div class="headline">                          
                     <section class="main-news">
-                        <img src="assets/images/c.jpg">
+                        <img src="assets/images/b.jpg">
                         <div class="main-news-label">
                             <span>Berita Utama</span>
                         </div>
                         <div class="main-news-title">
-                            <a href="news">Pelatihan Website dan Jaringan "Pendampingan dan Pengelolaan Jurnalistik dan Editing Video" Petugas SISDA Tahun 2019</a>
+                            <a href="news">Pelatihan Website dan Jaringan Petugas SISDA Tahun 2019</a>
                         </div>
                     </section>
                     <section class="main-videos">
                         <div class="video-main-1">
-                            <div class="embed-responsive embed-responsive-21by9">
-                               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FnJ9T7jMvCo" allowfullscreen></iframe>
+                          
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FnJ9T7jMvCo" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="video-main-2">
-                            <div class="embed-responsive embed-responsive-21by9">
-                                <iframe style="padding-right: 1%;" src="https://www.youtube.com/embed/mmKjbxASGlQ" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="embed-responsive embed-responsive-21by9">
-                                <iframe src="https://www.youtube.com/embed/V6wAyXetXDY" frameborder="0" allowfullscreen></iframe>
-                            </div>
+                            <iframe src="https://www.youtube.com/embed/mmKjbxASGlQ" frameborder="0" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/V6wAyXetXDY" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </section>
                 </div>
@@ -141,45 +140,50 @@
                     </div>
                 </section>
 
-                <div class="title-container-content"><i class="fa fa-list"></i> Berita BWS Sulawesi IV Kendari
-                    <a class="pull-right" href="#">Lihat Semua <i class="fa fa-angle-double-right "></i></a>
-                </div>
-                <section class="list-container">
-                    <div class="list-item">
-                        <img src="assets/images/c.jpg">
-                        <div class="list-item-title">
-                            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
+                    <section class="col-md-12 col-sm-12 main-content-1">
+                        <div class="title-container-content"><i class="fa fa-list"></i> Berita BWS Sulawesi IV Kendari
+                            <a class="pull-right" href="#">Lihat Semua <i class="fa fa-angle-double-right "></i></a>
                         </div>
-                    </div>
-                    <div class="list-item">
-                        <img src="assets/images/b.jpg">
-                        <div class="list-item-title">
-                            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <img src="assets/images/e.jpg">
-                        <div class="list-item-title">
-                            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <img src="assets/images/d.jpg">
-                        <div class="list-item-title">
-                            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <img src="assets/images/b.jpg">
-                        <div class="list-item-title">
-                            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
-                        </div>
-                    </div>
-                </section>
-
-
-                <section class="content-part-2">
-                    <div class="container-1">
+                        <ul class="list-container">
+                            <li class="list-item">
+                                <img src="assets/images/b.jpg">
+                                <div class="main-content-list-title">
+                                    <a href=""><h5>Kunjungan Menteri PUPR di Bendungan ladongi</h5></a>
+                                    <small><i class="fa fa-calendar"></i> Senin, 29 Juli 2019 | Admin</small> 
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <img src="assets/images/e.jpg">
+                                <div class="main-content-list-title">
+                                    <a href=""><h5>Kunjungan Menteri PUPR di Bendungan ladongi</h5></a>
+                                    <small><i class="fa fa-calendar"></i> Senin, 29 Juli 2019 | Admin</small> 
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <img src="assets/images/d.jpg">
+                                <div class="main-content-list-title">
+                                    <a href=""><h5>Kunjungan Menteri PUPR di Bendungan ladongi</h5></a>
+                                    <small><i class="fa fa-calendar"></i> Senin, 29 Juli 2019 | Admin</small> 
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <img src="assets/images/b.jpg">
+                                <div class="main-content-list-title">
+                                    <a href=""><h5>Kunjungan Menteri PUPR di Bendungan ladongi</h5></a>
+                                    <small><i class="fa fa-calendar"></i> Senin, 29 Juli 2019 | Admin</small> 
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <img src="assets/images/d.jpg">
+                                <div class="main-content-list-title">
+                                    <a href=""><h5>Kunjungan Menteri PUPR di Bendungan ladongi</h5></a>
+                                    <small><i class="fa fa-calendar"></i> Senin, 29 Juli 2019 | Admin</small> 
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <section class="col-md-3 col-sm-12 main-content-1" style="margin-right: 50px;">
                         <div class="title-container-content"><i class="fa fa-bullhorn "></i> Pengumuman</div>
                         <div class="list-item-2">
                             <ul>
@@ -187,27 +191,26 @@
                                 <a href=""><li><i class="fa fa-caret-right"></i> Pengadaan Tanah Bendungan Ladongi</li></a>
                             </ul>
                         </div>
-                    </div>
-                    <div class="container-2">
-                        <div class="title-container-content"><i class="fa fa-bullhorn "></i> Pengumuman</div>
-                        <div class="list-item-2">
-                            <ul>
-                                <a href=""><li><i class="fa fa-caret-right"></i> Pemberitahuan Rencana Pengadaan Tanah Bendungan Ladongi</li></a>
-                                <a href=""><li><i class="fa fa-caret-right"></i> Pengadaan Tanah Bendungan Ladongi</li></a>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="container-3">
-                        <div class="title-container-content"><i class="fa fa-bullhorn "></i> Poster</div>
-                        <div class="poster">
-                            <img src="assets/images/banner.jpg">
-                        </div>
-                    </div>
-                </section>
-                <footer>
-                    <img src="https://www.pu.go.id/assets/images/content/14695bd2f30a48949c97299bc89c7ebf.png">
-                </footer>
+                    </section>
 
+                    <section class="col-md-8 col-sm-12 main-content-1">
+                        <div class="title-container-content"><i class="fa fa-list"></i> Publikasi</div>
+                        <ul class="list-container">
+                            <li class="list-item-3">
+                                <img src="assets/images/publikasi.jpg">
+                            </li>
+                            <li class="list-item-3">
+                                <img src="assets/images/publikasi 2.jpg">
+                            </li>
+                            <li class="list-item-3">
+                                <img src="assets/images/publikasi 3.jpg">
+                            </li>
+                        </ul>
+                    </section>
+
+                    <footer>
+                        <img src="https://www.pu.go.id/assets/images/content/14695bd2f30a48949c97299bc89c7ebf.png">
+                    </footer>
                 </div>  <!-- END row KONTEN -->  
             </section> <!-- END col-12 KONTEN -->
 

@@ -1,0 +1,374 @@
+body{
+	font-family:'Roboto',sans-serif;
+}
+a:hover{
+	text-decoration: none;
+}
+
+/*HEADER TOP*/
+
+.top-bar{
+	height: auto;
+	padding: 5px 10px;
+	background-color: #002B5C;
+	font-size: 14px;
+	color: #fff;
+}
+.top-bar a, .title-container-content a{
+	color: #FFBA00;	
+}
+.top-bar a:hover{
+	color: #fff;	
+}
+
+.header-identity{
+	padding: 20px 10px;
+	height: auto;
+		/*background-image: url();*/
+}
+.header-identity img{
+	height: 50px;
+
+}
+
+/*MENU*/
+
+.top-bar, .navbar{
+	border-bottom: 4px solid #FFBA00;
+	width: 100%;
+}
+
+.navbar{
+	background-color: #002B5C !important;
+	padding: 0 1rem;
+	font-size: 12pt;
+}
+
+.nav-link{
+	color: #fff !important;
+}
+
+.nav-item{
+	border-left: 0.01px solid #777;
+	padding: 0 10px;
+}
+.nav-item:nth-last-child(1){
+	border-right: 0.01px solid #777;	
+}
+
+
+/*CAROUSEL*/
+.carousel-item img, .carousel video{
+	width: 100%;
+	height: 350px;
+}
+
+
+/*CONTENT*/
+.headline{
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+.main-news{
+	flex-basis: 54%;
+	box-sizing: border-box;
+	display: flex;
+	position: relative;
+}
+
+.main-news-label{
+    padding: 5px 10px;
+    background-color: red;
+    color: #FFBA00;
+    border-radius: 5px;
+    position:absolute;
+    z-index: 100;
+    font-size: 12pt;
+    font-weight: bold;   
+}
+
+.main-news-title{
+	position: absolute;
+	bottom: 2%;
+	width: 100%;
+    z-index:100;
+	margin-left: 2%;
+	font-weight: bold;
+	font-size: 14pt;
+}
+
+.main-news-title a{
+	color: #fff;
+	text-shadow: 0px 0px 10px #222;
+}
+
+
+
+.main-news-title a:hover, .list-item-title a:hover{
+	color: #FFBA00;
+	background-color: #002B5C;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-videos{
+	flex-basis: 45.5%;
+	display: flex;
+	flex-direction: column;
+	z-index: 100;
+}
+
+.video-main-1{
+	display: flex;
+	box-sizing: border-box;
+	padding-bottom: 1%;
+	height: 60%;
+}
+.video-main-2{
+	box-sizing: border-box;
+	height: 40%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.test{
+	flex-basis: 49%;
+}
+
+
+
+.support-section{
+	display: flex;
+}
+
+
+
+
+
+
+
+.title-container-content, .headline, .support-section{
+	margin-top: 20px;	
+}
+
+.title-container-content {
+	width: 100%; 
+	height: 35px;
+	line-height: 33px;
+	background-color: #002B5C;
+	padding-right: 20px;
+	border-right: 0;  
+	position: relative;
+	border-left: 5px solid #FFBA00;
+}
+
+.title-container-content i{
+	color: white;
+	font-size: 11pt !important;
+	margin: 0 5px 0 10px;
+}
+.title-container-content, .title-container-content i{
+	color: white;
+	font-size: 11pt !important;
+}
+
+.content img{
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.list-container{
+	padding-top: 15px;
+	display: flex;
+	align-items: stretch;
+ 	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.list-item{
+	flex-basis: 19.5%;
+  	position: relative;
+}
+
+.list-item img{
+	border-radius: 2px;
+	min-height: 100%;
+}
+.list-item-title{
+	position: absolute;
+	bottom: 0;
+	z-index: 100;
+	padding: 5px;
+	line-height: 1;
+	text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+
+}
+.list-item-title a{
+	font-size: 10pt !important;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.support-section{
+	background-color:  #002B5C;
+	padding: 10px 5px;
+	width: 100%;
+	border-radius: 5px;
+	border-left: 4px solid #FFBA00;
+	border-right: 4px solid #FFBA00;
+	font-size: 20px;
+}
+
+.support-section img{
+	width: 20%;
+}
+
+.support-section .fa {
+	padding: 5px;
+	width: 30px;
+	text-align: center;
+	border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.list-item-2 ul{
+	padding-left: 0px;
+	padding-top: 2px;
+	font-size: 11pt;
+}
+.list-item-2 li{
+	list-style-type: none;
+	padding: 10px;
+	border-bottom: 1px solid #CCC;
+	color: #555;
+	border-radius: 2px;
+}
+.list-item-2 li:hover{
+	background-color: #FFBA00 ;
+}
+
+
+
+
+.content-part-2{
+	display: flex;
+}
+.container-1{
+	flex: 2; 
+}
+.container-2{
+	flex: 3; 
+}
+.container-3{
+	flex: 2; 
+}
+
+
+.poster{
+	margin-top: 15px;
+}
+
+
+
+
+
+
+footer{
+	width: 100%;
+	background-color: #000;
+}
