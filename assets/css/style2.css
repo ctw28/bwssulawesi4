@@ -87,6 +87,7 @@ a:hover{
 	box-sizing: border-box;
 	display: flex;
 	position: relative;
+	border-bottom: 4px solid #FFBA00;
 }
 
 .main-news-label{
@@ -159,7 +160,9 @@ a:hover{
 	display: flex;
 	justify-content: space-between;
 }
-
+.video-main-2 iframe{
+	border-bottom: 5px solid #FFBA00;	
+}
 .test{
 	flex-basis: 49%;
 }
@@ -199,22 +202,6 @@ a:hover{
 	width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .list-container{
 	padding-top: 15px;
 	display: flex;
@@ -223,16 +210,22 @@ a:hover{
 	flex-wrap: wrap;
 }
 
-.list-item{
+.list-item, .list-item-4{
 	flex-basis: 19.5%;
   	position: relative;
+	border-bottom: 4px solid #FFBA00;
 }
 
-.list-item img{
+.list-item-4{
+	flex-basis: 32%;
+}
+
+.list-item img, .list-item-4 img{
 	border-radius: 2px;
 	min-height: 100%;
 }
-.list-item-title{
+
+.list-item-title, .list-item-title-2{
 	position: absolute;
 	bottom: 0;
 	z-index: 100;
@@ -241,14 +234,26 @@ a:hover{
 	text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
-
 }
-.list-item-title a{
+
+.list-item-title-2{
+	text-align: left;
+	padding: 10px;
+}
+
+.list-item-title a, .list-item-title-2 a, .list-item-title-2 p{
 	font-size: 10pt !important;
+	line-height: 1.4;	
 	color: #fff;
+	margin-bottom: 0px;
 }
 
-
+.list-item-title-2 a{
+	font-size: 12pt;
+	color: #FFBA00;
+	font-weight: bold;
+	text-transform: uppercase;
+}
 
 
 
@@ -278,12 +283,13 @@ a:hover{
 .support-section{
 	display: flex;
 	background-color:  #002B5C;
-	padding: 10px 5px;
+	padding: 5px;
 	width: 100%;
 	border-radius: 5px;
 	border-left: 4px solid #FFBA00;
 	border-right: 4px solid #FFBA00;
 	font-size: 20px;
+	align-content: stretch;
 }
 
 .support-section img{
@@ -321,8 +327,19 @@ a:hover{
   color: white;
 }
 
+.search-container{
+	flex: 4;
+}
 
-
+.service-container{
+	flex: 3;
+}
+.service-container img{
+	width: 30%;
+}
+.social-media-container{
+	flex: 1;
+}
 
 
 
@@ -334,7 +351,6 @@ a:hover{
 
 .list-item-2 ul{
 	padding-left: 0px;
-	padding-top: 2px;
 	font-size: 11pt;
 }
 .list-item-2 li{
@@ -392,13 +408,11 @@ a:hover{
 	margin-right: 4%;
 }
 
-.event-item, .publikasi{
+.publikasi{
 	margin-top: 10px;
 }
 
 .event-item{
-	border-radius: 10px;
-	border : 1px solid #CCC;
 	font-size: 9pt;
 	color: #555;
 	padding: 20px;	
@@ -421,8 +435,30 @@ a:hover{
 .publikasi-item{
 	flex-basis: 32%;
 }
+.publikasi-item p{
+	font-weight: bold;
+	background-color: #FFBA00;
+	border-radius: 5px;
+	margin-bottom: 0px;
+}
 
+
+.pengunjung-container h4{
+	font-weight: 700;
+	margin: 0 !important;
+
+}
+.content-container{
+	margin-top: 10px;
+	border-radius: 5px;
+	border : 1px solid #CCC;
+}
+.pengunjung-container{
+	padding: 10px;
+	text-align: center;
+}
 footer{
+	border-top: 4px solid #FFBA00;
 	width: 100%;
 	height: 100px;
 	background-color: #000;
