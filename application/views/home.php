@@ -142,12 +142,66 @@
                       </div>
                     </div>
 
+                    <div class="social-media-container">
+                          <a href="#" class="fa fa-facebook"></a>
+                          <a href="#" class="fa fa-twitter"></a>
+                          <a href="#" class="fa fa-youtube"></a>
+                          <a href="#" class="fa fa-instagram"></a>
+
+                    </div>
+                </section>
+                <section class="support-section">
+                    <div class="breaking-news-ticker" id="example" style="height: 20px;">
+                      <div class="bn-label">Kilas Berita</div>
+                      <div class="bn-news">
+                        <ul>
+                          <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
+                          <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
                     <div class="search-container">
                         <input type="text" name="search">
                     </div>
                 </section>
 
                 <div class="title-container-content"><i class="fa fa-list"></i> Berita BWS Sulawesi IV Kendari
+                    <a class="pull-right" href="#">Lihat Semua <i class="fa fa-angle-double-right "></i></a>
+                </div>
+                <section class="list-container">
+                    <div class="list-item">
+                        <img src="assets/images/c.jpg">
+                        <div class="list-item-title">
+                            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <img src="assets/images/b.jpg">
+                        <div class="list-item-title">
+                            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <img src="assets/images/e.jpg">
+                        <div class="list-item-title">
+                            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <img src="assets/images/d.jpg">
+                        <div class="list-item-title">
+                            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <img src="assets/images/b.jpg">
+                        <div class="list-item-title">
+                            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
+                        </div>
+                    </div>
+                </section>
+                <div class="title-container-content"><i class="fa fa-list"></i> Berita Kementerian PUPR
                     <a class="pull-right" href="#">Lihat Semua <i class="fa fa-angle-double-right "></i></a>
                 </div>
                 <section class="list-container">
@@ -271,8 +325,16 @@
                         <img src="assets/images/pelosika.jpg">
                         <div class="list-item-title-2">
                             <a href="">Bendungan Pelosika</a>
-                            <p>Lokasi : Kabupaten Kolaka Timur dan Konawe<br>
+                            <p>Lokasi : Kab. Kolaka Timur dan Konawe<br>
                             Tahun : 2019-2023</p>
+                        </div>
+                    </div>
+                    <div class="list-item-4">
+                        <img src="assets/images/tongauna.jpg">
+                        <div class="list-item-title-2">
+                            <a href="">Bendung Tongauna</a>
+                            <p>Lokasi : Kabupaten Kolaka Timur<br>
+                            Tahun : 2016-2018</p>
                         </div>
                     </div>
                     <div class="list-item-4">
@@ -287,7 +349,34 @@
 
 
                 <footer>
-                    <img src="https://www.pu.go.id/assets/images/content/14695bd2f30a48949c97299bc89c7ebf.png">
+                    <div class="footer">
+                        <div class="address">
+                            <h3>Alamat Kantor</h3>
+                            <address>
+                                  <div>BWS Sulawesi IV Kendari<br>Jalan Balai Kota IV No. 01 Kendari<br>Sulawesi Tenggara</div>
+                                <div><i class="fa fa-phone"></i>Fax: (+62401) 3122818, Telp: (+62401) 3122818</div>
+                                <div><i class="fa fa-envelope-o"></i>sisdasulawesi4@gmail.com</div>
+                            </address>                                         
+                        </div>                        
+                        <div class="address">
+                            <h3>Situs Terkait</h3>
+                            <address>
+                                <div>Kementerian Pekerjaan Umum dan Perumahan Rakyat</div>
+                                <div>Ditjen SDA</div>
+                            </address>                                         
+                        </div>                        
+                        <div class="address">
+                            <h3>Navigasi</h3>
+                            <address>
+                                <div>Site Map</div>
+                                <div>FAQ</div>
+                            </address>                                         
+                        </div>                        
+                    </div>
+
+                    <div id="copyright">
+                        <p>Copyright @2019 Unit SISDA BWS Sulawesi IV Kendari</p>
+                    </div>
                 </footer>
 
                 </div>  <!-- END row KONTEN -->  
