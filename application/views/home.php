@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-12">
                         <a href="http://sda.pu.go.id/"><i class="fa fa-caret-left"></i> Ditjen SDA</a>
-                        <span class="pull-right">27 Juli 2019 | 10:14</span>                  
+                        <span class="real-time pull-right"></span>                  
                     </div>
                 </div>
             </div>
@@ -105,13 +105,22 @@
 
                 <div class="headline">                          
                     <section class="main-news">
-                        <img src="assets/images/c.jpg">
+                        <?php foreach ($berita_utama->result() as $row) {
+                            $string = htmlentities($row->judul_berita);
+                            $trim=trim($string);
+                            $judul = strtolower(str_replace(" ", "-", $trim));
+
+                        ?>
+                        <img src="assets/images/berita/thumbs/thumb_1000X1000_<?= $row->foto ?>" alt="<?= $row->judul_berita ?>">
                         <div class="main-news-label">
                             <span>Berita Utama</span>
                         </div>
                         <div class="main-news-title">
-                            <a href="news">Pelatihan Website dan Jaringan "Pendampingan dan Pengelolaan Jurnalistik dan Editing Video" Petugas SISDA Tahun 2019</a>
+                            <a href="news/<?= urlencode($judul); ?>"><?= $row->judul_berita ?></a>
                         </div>
+                        <?php
+                            }
+                        ?>
                     </section>
                     <section class="main-videos">
                         <div class="video-main-1">
@@ -138,6 +147,9 @@
                         <ul>
                           <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
                           <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
+                          <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
+                          <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
+                          <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
                         </ul>
                       </div>
                     </div>
@@ -150,16 +162,7 @@
 
                     </div>
                 </section>
-                <section class="support-section">
-                    <div class="breaking-news-ticker" id="example" style="height: 20px;">
-                      <div class="bn-label">Kilas Berita</div>
-                      <div class="bn-news">
-                        <ul>
-                          <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
-                          <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
-                        </ul>
-                      </div>
-                    </div>
+                <section class="help-section">
 
                     <div class="search-container">
                         <input type="text" name="search">
@@ -375,7 +378,7 @@
                     </div>
 
                     <div id="copyright">
-                        <p>Copyright @2019 Unit SISDA BWS Sulawesi IV Kendari</p>
+                        Copyright © 2018. Unit SISDA BWS Sulawesi IV Kendari | All Rights Reserved | Tersertifikasi ISO 9001:2015
                     </div>
                 </footer>
 
@@ -392,18 +395,52 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="<?php echo base_url()?>assets/plugins/news-ticker/breaking-news-ticker.min.js"></script>
   <script>
-    $('#example').breakingNews({
-        height: 30,
-        fontSize: 12,
-        themeColor: "default",
-        background: "#002B5C",
-        borderWidth: 1,
-        radius: 10,
-        zIndex: 99999
-    });
+      $(document).ready(function() {
+          clockUpdate();
+          setInterval(clockUpdate, 1000);
 
+          $('#example').breakingNews({
+              height: 35,
+              fontSize: 12,
+              themeColor: "default",
+              background: "#002B5C",
+              borderWidth: 0,
+              radius: 10,
+              zIndex: 99999
+          });
+      })
 
-  </script>
+      function clockUpdate() {
+          var date = new Date();
+          var hari = ['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu',];
+          var bulan = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+          function addZero(x) {
+              if (x < 10) {
+                  return x = '0' + x;
+              } else {
+                  return x;
+              }
+          }
+
+          function twelveHour(x) {
+              if (x > 12) {
+                  return x = x - 12;
+              } else if (x == 0) {
+                  return x = 12;
+              } else {
+                  return x;
+              }
+          }
+
+          var todayDate = hari[date.getDay()]+ ', ' +addZero(date.getDate()) + ' ' +bulan[date.getMonth()] + ' ' + date.getFullYear();
+          var h = addZero(twelveHour(date.getHours()));
+          var m = addZero(date.getMinutes());
+          var s = addZero(date.getSeconds());
+          console.log(todayDate);
+
+          $('.real-time').text(todayDate + ' | ' + h + ':' + m + ':' + s)
+      }
+    </script>
 </body>
 </html>
 

@@ -1,6 +1,6 @@
 .breaking-news-ticker{
   display: block;
-  width: 70%;
+  flex-basis: 85%;
   /*border: solid 1px #ce2525;*/
   background: #FFF;
   height: 20px;
@@ -11,7 +11,8 @@
   border-radius: 5px;
   text-align: auto;
   font-size: 14px;
-  margin-right: 20px;
+  margin-right: 10px;
+
 }
 .breaking-news-ticker *{
   box-sizing: border-box;
