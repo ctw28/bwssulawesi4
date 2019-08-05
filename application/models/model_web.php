@@ -30,12 +30,12 @@ class Model_web extends CI_model {
 
 	public function berita_lainnya()
 	{
-		return $this->db->query("SELECT * FROM t_berita ORDER BY tanggal_publish DESC LIMIT 1,4");
+		return $this->db->query("SELECT * FROM t_berita ORDER BY tanggal_publish DESC LIMIT 1,5");
 	}
 
 	public function berita_foto_lainnya($id)
 	{
-		return $this->db->query("SELECT * FROM t_berita_foto WHERE id_berita=$id");
+		return $this->db->query("SELECT * FROM t_berita_foto WHERE id_berita=$id LIMIT 4");
 	}
 
 	public function total_klik()
@@ -69,7 +69,7 @@ class Model_web extends CI_model {
 	public function tampil_album()
 	{
 		// $data="SELECT * FROM t_galeri_foto_album a INNER JOIN t_galeri_foto g ON a.id_album=g.id_album ORDER BY a.tgl_buat DESC LIMIT 3";
-		$data="SELECT * FROM t_galeri_foto_album ORDER BY tgl_buat DESC ";
+		$data="SELECT * FROM t_galeri_foto_album ORDER BY tgl_buat ";
 		return $this->db->query($data);
 	}
 

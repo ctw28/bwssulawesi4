@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="<?php echo base_url()?>assets/plugins/news-ticker/breaking-news-ticker.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container main">
         <div class="row">
 
             <!-- HEADER TOP -->
@@ -38,7 +38,7 @@
             </div>
 
             <!-- MENU -->
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-lg navbar-light main">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -99,11 +99,14 @@
                     </ul>
                 </div>
             </nav>
+        </div>
+    </div>
+    <div class="container main">
 
             <section class="col-12 content">
                 <div class="row">
 
-                <div class="headline">                          
+                <div class="headline mobile-hide">                          
                     <section class="main-news">
                         <?php foreach ($berita_utama->result() as $row) {
                             $string = htmlentities($row->judul_berita);
@@ -139,75 +142,73 @@
                     </section>
                 </div>
 
+                        <section class="support-section">
+                            <div class="breaking-news-ticker" id="example" style="height: 20px;">
+                              <div class="bn-label">Kilas Informasi</div>
+                              <div class="bn-news">
+                                <ul>
+                                  <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
+                                  <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
+                                  <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
+                                  <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
+                                  <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
+                                </ul>
+                              </div>
+                            </div>
 
-                <section class="support-section">
-                    <div class="breaking-news-ticker" id="example" style="height: 20px;">
-                      <div class="bn-label">Kilas Berita</div>
-                      <div class="bn-news">
-                        <ul>
-                          <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
-                          <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
-                          <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
-                          <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
-                          <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
-                        </ul>
-                      </div>
-                    </div>
+                            <div class="social-media-container">
+                                  <a href="#" class="fa fa-facebook"></a>
+                                  <a href="#" class="fa fa-twitter"></a>
+                                  <a href="#" class="fa fa-youtube"></a>
+                                  <a href="#" class="fa fa-instagram"></a>
 
-                    <div class="social-media-container">
-                          <a href="#" class="fa fa-facebook"></a>
-                          <a href="#" class="fa fa-twitter"></a>
-                          <a href="#" class="fa fa-youtube"></a>
-                          <a href="#" class="fa fa-instagram"></a>
+                            </div>
+                        </section>
+                        <section class="help-section">
 
-                    </div>
-                </section>
-                <section class="help-section">
-
-                    <div class="search-container">
-                        <input type="text" name="search">
-                    </div>
-                </section>
+                            <div class="search-container">
+                                <input type="text" name="search">
+                            </div>
+                        </section>
 
                 <div class="title-container-content"><i class="fa fa-list"></i> Berita BWS Sulawesi IV Kendari
                     <a class="pull-right" href="#">Lihat Semua <i class="fa fa-angle-double-right "></i></a>
                 </div>
                 <section class="list-container">
+
+                    <?php 
+                        function limit_words($string, $word_limit){
+                            $words = explode(" ",$string);
+                            return implode(" ",array_splice($words,0,$word_limit));
+                        }
+                        foreach ($berita_lainnya->result() as $row) {                          
+                          // $string=preg_replace('/[^a-zA-Z0-9 &%|{.}=,?!*()-_+$@;<>]/', '', $row->judul_berita);
+                          $string = htmlentities($row->judul_berita);
+                          $trim=trim($string);
+                          $judul = strtolower(str_replace(" ", "-", $trim));
+                          $tahun = date("Y", strtotime($row->tanggal_publish));
+                          $tanggal = date("d", strtotime($row->tanggal_publish));
+                          $day_name = date("w", strtotime($row->tanggal_publish));
+                          $moon = date("n", strtotime($row->tanggal_publish));
+                          $waktu = date("H:i", strtotime($row->tanggal_publish));
+                          $hari = array("Minggu","Senin", "Selasa","Rabu", "Kamis","Jumat","Sabtu");
+                          $bulan = array("","Jan", "Feb","Mar", "Apr","Mei","Juni","Juli", "Agust","Sept", "Okt","Nov","Des");
+                    ?>
+
                     <div class="list-item">
-                        <img src="assets/images/c.jpg">
+                        <img src="assets/images/berita/thumbs/thumb_300X300_<?php echo $row->foto ?>">
                         <div class="list-item-title">
-                            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
+                            <a href="news/<?php echo urlencode($judul); ?>"><?= substr($row->judul_berita,0, 60)?></a></a>
                         </div>
                     </div>
-                    <div class="list-item">
-                        <img src="assets/images/b.jpg">
-                        <div class="list-item-title">
-                            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <img src="assets/images/e.jpg">
-                        <div class="list-item-title">
-                            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <img src="assets/images/d.jpg">
-                        <div class="list-item-title">
-                            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <img src="assets/images/b.jpg">
-                        <div class="list-item-title">
-                            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
-                        </div>
-                    </div>
+                    <?php 
+                        } //end for
+                    ?> 
                 </section>
-                <div class="title-container-content"><i class="fa fa-list"></i> Berita Kementerian PUPR
+                <div class="title-container-content mobile-hide"><i class="fa fa-list"></i> Berita Kementerian PUPR
                     <a class="pull-right" href="#">Lihat Semua <i class="fa fa-angle-double-right "></i></a>
                 </div>
-                <section class="list-container">
+                <section class="list-container mobile-hide">
                     <div class="list-item">
                         <img src="assets/images/c.jpg">
                         <div class="list-item-title">
@@ -242,7 +243,7 @@
 
 
                 <section class="content-part-2">
-                    <div class="container-1">
+                    <div class="container-1 mobile-hide">
                         <div class="title-container-content"><i class="fa fa-bullseye "></i> Poling</div>
                         <div class="content-container poling">
                           <p>Apa Pendapat Anda Tentang Tampilan Website ini ?</p>
@@ -254,8 +255,9 @@
                         <div class="title-container-content"><i class="fa fa-bullhorn "></i> Pengumuman</div>
                         <div class="list-item-2">
                             <ul class="content-container ">
-                                <a href=""><li><i class="fa fa-caret-right"></i> Pemberitahuan Rencana Pengadaan Tanah Bendungan Ladongi</li></a>
-                                <a href=""><li><i class="fa fa-caret-right"></i> Pengadaan Tanah Bendungan Ladongi</li></a>
+                              <?php foreach ($pengumuman->result() as $row) { ?> 
+                                <a href="pengumuman/selengkapnya/<?= $row->id_pengumuman ?>"><li><i class="fa fa-caret-right"></i> <?= $row->judul_pengumuman ?></li></a>
+                              <?php } ?>
                             </ul>
                         </div>
                         <div class="title-container-content"><i class="fa fa-book"></i> Publikasi</div>
@@ -265,11 +267,11 @@
                                 <p>Buletin</p>
                             </div>
                             <div class="publikasi-item">
-                                <img src="assets/images/buletin.jpg">
+                                <img src="assets/images/pulibkasi-hidrologi.jpg">
                                 <p>Buletin</p>
                             </div>
                             <div class="publikasi-item">
-                                <img src="assets/images/buletin.jpg">
+                                <img src="assets/images/publikasi-hidrologi-2.jpg">
                                 <p>Buletin</p>
                             </div>
                         </div>
@@ -277,27 +279,25 @@
                     <div class="container-2">
                         <div class="title-container-content"><i class="fa fa-bookmark "></i> Events</div>
                         <div class="list-item-3">
+                            <?php foreach ($agenda->result() as $row) { 
+                              $tahun = date("Y", strtotime($row->tgl_agenda));
+                              $tanggal = date("d", strtotime($row->tgl_agenda));
+                              $day_name = date("w", strtotime($row->tgl_agenda));
+                              $moon = date("n", strtotime($row->tgl_agenda));
+
+                              $hari = array("Minggu","Senin", "Selasa","Rabu", "Kamis","Jumat","Sabtu");
+                              $bulan = array("","Jan", "Feb","Mar", "Apr","Mei","Juni","Juli", "Agust","Sept", "Okt","Nov","Des");
+
+                            ?>
                             <div class="content-container event-item">
-                                <h6>Upacara hari Kemerdekaan RI Ke - 74</h6>
+                                <h6><?php echo $row->judul_agenda ?></h6>
                                 <!-- <p>Kepada Seluruh Karyawan/Karywati BWS Sulawesi IV Kendari untuk menghadiri Upacara Peringatan Hari Kemerdekaan RI Ke - 74 : </p> -->
-                                <i class="fa fa-map-marker "></i> Halaman kantor BWS Sulawesi IV Kendari <br>
-                                <i class="fa fa-calendar"></i> Sabtu, 17 Agustus 2019  
+                                <i class="fa fa-map-marker "></i> <?= $row->tempat ?> <br>
+                                <i class="fa fa-calendar"></i> <?= $hari[$day_name].", ".$tanggal." ". $bulan[$moon] ." ". $tahun; ?>  
                                 <i class="fa fa-clock-o"></i> 07.00 Wita
                             </div>
-                            <div class="content-container event-item">
-                                <h6>Senam Jumat</h6>
-                                <!-- <p>Diharapkan Kepada Seluruh Karyawan/Karywati BWS Sulawesi IV Kendari untuk mengikuti senam jumat : </p> -->
-                                <i class="fa fa-map-marker "></i> Halaman kantor BWS Sulawesi IV Kendari <br>
-                                <i class="fa fa-calendar"></i> Sabtu, 17 Agustus 2019  
-                                <i class="fa fa-clock-o"></i> 07.00 Wita
-                            </div>
-                            <div class="content-container event-item">
-                                <h6>Hari Raya Idul Adha 1440 H</h6>
-                                <!-- <p>Kepada Seluruh Karyawan/Karywati BWS Sulawesi IV Kendari untuk mengambil hewan kurban : </p> -->
-                                <i class="fa fa-map-marker "></i> Parkir Belakang BWS Sulawesi IV Kendari <br>
-                                <i class="fa fa-calendar"></i> Sabtu, 17 Agustus 2019  
-                                <i class="fa fa-clock-o"></i> 07.00 Wita
-                            </div>
+                            <?php } ?>
+                            
                         </div>
                         <div class="title-container-content"><i class="fa fa-bookmark "></i> Pengunjung Website</div>
                             <div class="content-container pengunjung-container">
@@ -305,17 +305,24 @@
                             </div>
 
                     </div>
-                    <div class="container-3">
+                    <div class="container-3 mobile-hide">
+                        <div class="title-container-content"><i class="fa fa-user-circle-o"></i> Layanan</div>
+                        <div class="list-item-2">
+                            <ul class="content-container ">
+                                <a href=""><li><img src="assets/images/logo/permintaan-data.png"></li></a>
+                                <a href=""><li><img src="assets/images/logo/pengaduan.png"></li></a>
+                            </ul>
+                        </div>                        
                         <div class="poster">
                             <img src="assets/images/banner.jpg">
                         </div>
                     </div>
                 </section>
 
-                <div class="title-container-content"><i class="fa fa-building "></i> Kegiatan Strategis
+                <div class="title-container-content mobile-hide"><i class="fa fa-building "></i> Kegiatan Strategis
                     <a class="pull-right" href="#">Lihat Semua <i class="fa fa-angle-double-right "></i></a>
                 </div>
-                <section class="kegiatan-strategis list-container">
+                <section class="kegiatan-strategis list-container mobile-hide">
                     <div class="list-item-4">
                         <img src="assets/images/ladongi.jpg">
                         <div class="list-item-title-2">
@@ -351,6 +358,12 @@
                 </section>
 
 
+
+                </div>  <!-- END row KONTEN -->  
+            </section> <!-- END col-12 KONTEN -->
+
+            <div class="row">
+              
                 <footer>
                     <div class="footer">
                         <div class="address">
@@ -381,11 +394,7 @@
                         Copyright © 2018. Unit SISDA BWS Sulawesi IV Kendari | All Rights Reserved | Tersertifikasi ISO 9001:2015
                     </div>
                 </footer>
-
-                </div>  <!-- END row KONTEN -->  
-            </section> <!-- END col-12 KONTEN -->
-
-        </div><!-- END row UTAMA -->  
+            </div>
     </div> <!-- END CONTAINER UTAMA -->
 
   <!-- Optional JavaScript -->
