@@ -1,11 +1,18 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Berita extends CI_Controller {
-
+	public function index()
+	{
+		$isi['content'] = 'error-404.php';
+		$isi['identity'] = 'news';
+		$this->load->model('model_web');
+		$isi['terbaru']	= $this->model_web->berita_terbaru();;
+		$this->load->view('template', $isi);
+	}
 	public function selengkapnya()
 	{
 		$isi['content'] = 'berita-selengkapnya';
-		$isi['sidebar'] = 'berita-sidebar';
+		$isi['identity'] = 'news';
 
 		$this->load->model('model_web');
 		$isi['pemberitahuan'] = $this->model_web->pemberitahuan();		
@@ -22,9 +29,9 @@ class Berita extends CI_Controller {
 
 		// $this->db->query("UPDATE t_berita set klik='$jumlah_klik' where judul_berita='$key' ");
 
-		// if($query->num_rows()==0){
-		// 	redirect('berita/semua');
-		// }
+		if($query->num_rows()==0){
+			redirect('berita');
+		}
 
 		if($query->num_rows()>0){
 			foreach ($query -> result() as $row) {

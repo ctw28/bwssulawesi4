@@ -1,0 +1,1 @@
+<p style="color:red">Halaman / Berita yang anda cari tidak ditemukan.</p>

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="<?= base_url()?>assets/plugins/news-ticker/breaking-news-ticker.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container main">
         <div class="row">
 
             <!-- HEADER TOP -->
@@ -37,142 +37,50 @@
                 </div>
             </div>
 
-            <!-- MENU -->
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+            <?= $this->load->view('part/menu');?>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#"><i class="fa fa-home"></i> Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profil</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Data Informasi SDA</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publikasi</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Galeri</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layanan Publik</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">TKPSDA</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">P3A</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Kontak</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <section class="support-section">
-                <div class="breaking-news-ticker" id="example" style="height: 20px;">
-                  <div class="bn-label">Kilas Informasi</div>
-                  <div class="bn-news">
-                    <ul>
-                      <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
-                      <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
-                      <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
-                      <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
-                      <li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
-                    </ul>
-                  </div>
-                </div>
+            <section class="col-12">
+	            <section class="support-section">
+	                <div class="breaking-news-ticker" id="example" style="height: 20px;">
+	                  	<div class="bn-label">Kilas Informasi</div>
+	                  	<div class="bn-news">
+		                    <ul>
+		                      	<li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
+		                      	<li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
+		                      	<li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
+		                      	<li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
+		                      	<li><a href="#">Selamat Datang di Website Resmi Balai Wilayah Sungai Sulawesi IV Kendari</a></li>
+		                    </ul>
+	                  	</div>
+                	</div>
 
-                <div class="social-media-container">
-                      <a href="#" class="fa fa-facebook"></a>
-                      <a href="#" class="fa fa-twitter"></a>
-                      <a href="#" class="fa fa-youtube"></a>
-                      <a href="#" class="fa fa-instagram"></a>
-                </div>
+	                <div class="social-media-container">
+	                    <a href="#" class="fa fa-facebook"></a>
+	                    <a href="#" class="fa fa-twitter"></a>
+	                    <a href="#" class="fa fa-youtube"></a>
+	                    <a href="#" class="fa fa-instagram"></a>
+	                </div>
+	            </section>
+	            <section class="help-section">
+	                <div class="search-container">
+	                    <input type="text" name="search">
+	                </div>
+	            </section>
             </section>
-            <section class="help-section">
-                <div class="search-container">
-                    <input type="text" name="search">
-                </div>
-            </section>
+
             <section class="col-12 content">
-            	<div class="row">
+            	<div class="row">            		
             		<div class="col-md-4 col-sm-12 mobile-hide">
-            		
-
-        			<div class="title-container-content"><i class="fa fa-list"></i> Berita Terbaru</div>
-	                <section class="list-container">
-	                	<div class="content-container" style="padding: 10px;">
-
-	                		<?php 
-		                        function limit_words($string, $word_limit){
-		                            $words = explode(" ",$string);
-		                            return implode(" ",array_splice($words,0,$word_limit));
-		                        }
-		                        foreach ($terbaru->result() as $row) {                          
-		                          $string = htmlentities($row->judul_berita);
-		                          $trim=trim($string);
-		                          $judul = strtolower(str_replace(" ", "-", $trim));
-		                          $tahun = date("Y", strtotime($row->tanggal_publish));
-		                          $tanggal = date("d", strtotime($row->tanggal_publish));
-		                          $day_name = date("w", strtotime($row->tanggal_publish));
-		                          $moon = date("n", strtotime($row->tanggal_publish));
-		                          $waktu = date("H:i", strtotime($row->tanggal_publish));
-		                          $hari = array("Minggu","Senin", "Selasa","Rabu", "Kamis","Jumat","Sabtu");
-		                          $bulan = array("","Jan", "Feb","Mar", "Apr","Mei","Juni","Juli", "Agust","Sept", "Okt","Nov","Des");
-		                    ?>
-
-		                    <div class="list-item-5">
-		                        <img src="<?= base_url()?>assets/images/berita/thumbs/thumb_300X300_<?php echo $row->foto ?>">
-		                        <div class="list-item-title-5">
-		                            <a href="<?= base_url()?>news/<?php echo urlencode($judul); ?>"><?= substr($row->judul_berita,0, 25)?> ...</a>
-		                            <small>Jumat, 03 Agustus 2019</small>
-		                        </div>
-		                    </div>
-		                    <?php 
-		                        } //end for
-		                    ?> 
-
-	                	</div>
-	                </section>
-	                <div class="container-3">
-                        <div class="poster">
-                            <img src="<?= base_url()?>assets/images/banner.jpg">
-                        </div>
-                    </div>
-
+	            		<?php 
+	            			if($identity == 'profil'){
+	            				echo $this->load->view('profil-side-menu');
+	            			}
+	            			if($identity == 'news' || $identity == 'permintaan'){
+	            				echo $this->load->view('berita-side-menu');
+	            			}
+	            		?>
             		</div>
-            		<div class="col-md-8 col-sm-12">
+            		<div class="col-md-8 col-sm-12 show-content">
 	            			<?= $this->load->view($content); ?>
             		</div>
         		</div>  <!-- END row KONTEN -->  
