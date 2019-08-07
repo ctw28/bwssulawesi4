@@ -55,14 +55,14 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">P3A</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="<?= base_url()?>">Database P3A</a>
-                    <a class="dropdown-item" href="<?= base_url()?>">Usulan Perbaikan</a>
-                    <a class="dropdown-item" href="<?= base_url()?>">Peta Lokasi P3A</a>
+                    <a class="dropdown-item" href="<?= base_url()?>p3a/database-p3a">Database P3A</a>
+                    <a class="dropdown-item" href="<?= base_url()?>p3a/usulan">Usulan Perbaikan</a>
+                    <a class="dropdown-item" href="<?= base_url()?>p3a/peta-lokasi">Peta Lokasi P3A</a>
                     <a class="dropdown-item" href="<?= base_url()?>">Pelaporan</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Kontak</a>
+                <a class="nav-link" href="<?= base_url()?>kontak">Kontak</a>
             </li>
         </ul>
     </div>
