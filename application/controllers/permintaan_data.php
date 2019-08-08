@@ -1,21 +1,25 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Permintaan_data extends CI_Controller {
+
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('model_web');
+
+	}
 	public function index()
 	{
-		$isi['content'] = 'permintaan-data';
-		$isi['identity'] = 'permintaan';
-		$this->load->model('model_web');
-		$isi['terbaru']	= $this->model_web->berita_terbaru();;
-
+		$isi['content'] = 'permintaan-data/permintaan-data-home';
+		$isi['sidebar'] = 'permintaan';
+		$isi['terbaru']	= $this->model_web->berita_terbaru();
 		$this->load->view('template', $isi);		
 	}	
 	public function panduan()
 	{
-		$isi['content'] = 'permintaan-panduan';
 		$this->load->model('model_web');
-		$isi['pemberitahuan'] = $this->model_web->pemberitahuan();		
-
+		$isi['content'] = 'permintaan-panduan';
+		$isi['pemberitahuan'] = $this->model_web->pemberitahuan();
 		$this->load->view('template-galeri', $isi);		
 	}	
 	

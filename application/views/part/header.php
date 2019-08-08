@@ -12,7 +12,7 @@
             <div class="header-identity">
                 <div class="row">
                     <div class="col-4">
-                        <img src="assets/images/logo/logo-bws-sulawesi-iv-kendari.png">
+                        <img src="<?= base_url()?>assets/images/logo/logo-bws-sulawesi-iv-kendari.png" alt="logo-bws-sulawesi-iv-kendari">
                     </div>
                     <div class="col-8">
                       

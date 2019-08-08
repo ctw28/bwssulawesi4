@@ -38,8 +38,8 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Galeri</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="<?= base_url()?>">Foto</a>
-                    <a class="dropdown-item" href="<?= base_url()?>">Video</a>
+                    <a class="dropdown-item" href="<?= base_url()?>galeri/foto">Foto</a>
+                    <a class="dropdown-item" href="<?= base_url()?>galeri/video">Video</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -49,16 +49,22 @@
                     <a class="dropdown-item" href="<?= base_url()?>permintaan-data">Permintaan Data</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">TKPSDA</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TKPSDA</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="<?= base_url()?>tkpsda/dasar-pembentukan">Dasar Pembentukan</a>
+                    <a class="dropdown-item" href="<?= base_url()?>tkpsda/tkpsda/keanggotaan">Keanggotaan</a>
+                    <a class="dropdown-item" href="<?= base_url()?>tkpsda/tugas">Tugas TKPSDA</a>
+                    <a class="dropdown-item" href="<?= base_url()?>tkpsda/sekretariat">Sekretariat</a>
+                    <a class="dropdown-item" href="<?= base_url()?>tkpsda/kegiatan">Kegiatan</a>
+                </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">P3A</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="<?= base_url()?>p3a/database-p3a">Database P3A</a>
-                    <a class="dropdown-item" href="<?= base_url()?>p3a/usulan">Usulan Perbaikan</a>
                     <a class="dropdown-item" href="<?= base_url()?>p3a/peta-lokasi">Peta Lokasi P3A</a>
-                    <a class="dropdown-item" href="<?= base_url()?>">Pelaporan</a>
+                    <a class="dropdown-item" href="<?= base_url()?>p3a/usulan">Usulan Perbaikan</a>
                 </div>
             </li>
             <li class="nav-item">

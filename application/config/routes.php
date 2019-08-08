@@ -13,6 +13,8 @@ $route['profil/lokasi-kantor'] = 'profil/lokasi_kantor';
 $route['p3a/peta-lokasi'] = 'p3a/peta_lokasi';
 $route['p3a/database-p3a'] = 'p3a/database_p3a';
 
+$route['tkpsda/dasar-pembentukan'] = 'tkpsda/dasar_pembentukan';
+
 
 
 

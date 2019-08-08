@@ -431,7 +431,7 @@ a:hover{
 .list-item-2 li{
 	list-style-type: none;
 	padding: 10px;
-	border-bottom: 1px solid #CCC;
+	border-bottom: 1px solid rgba(0,0,0,0.08);;
 	color: #555;
 	border-radius: 2px;
 }
@@ -529,7 +529,10 @@ a:hover{
 .content-container{
 	margin-top: 10px;
 	border-radius: 5px;
-	border : 1px solid #CCC;
+	/*border : 1px solid #CCC;*/
+	border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0px 3px 8px rgba(0,0,0, 0.06);
+
 	width: 100%;
 }
 .pengunjung-container{
@@ -806,4 +809,25 @@ footer{
 
 .list-style-number{
 	list-style-type: decimal;
+}
+
+.card{
+	height: auto;
+	border: none;
+}
+.card-body{
+	padding: 0.5rem;
+	border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0px 3px 8px rgba(0,0,0, 0.06);
+    border-radius: 5px;
+}
+.card p{
+	font-size: 11pt;
+}
+
+.card-columns {
+    column-count:4;
+}
+.card iframe{
+	/*height: 100px !important;*/
 }

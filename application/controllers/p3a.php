@@ -10,24 +10,25 @@ class P3a extends CI_Controller {
 	public function database_p3a()
 	{
 		$isi['data_p3a'] = $this->model_web->tampil_p3a();				
-		$isi['content'] = 'p3a-data';
-		$isi['identity'] = 'p3a';
+		$isi['content'] = 'p3a/p3a-data';
+		$isi['sidebar'] = 'sidebar/sidebar-p3a';
+
 		$this->load->view('template', $isi);		
 	}	
 
 	public function usulan()
 	{
 		$isi['data_p3a'] = $this->model_web->tampil_p3a();				
-		$isi['content'] = 'p3a-usulan';
-		$isi['sidebar'] = 'p3a';
+		$isi['content'] = 'p3a/p3a-usulan';
+		$isi['sidebar'] = 'sidebar/sidebar-p3a';
 		$this->load->view('template', $isi);		
 	}	
 
 	public function peta_lokasi()
 	{
 		$isi['data_p3a'] = $this->model_web->tampil_p3a();				
-		$isi['content'] = 'p3a-peta';
-		$isi['identity'] = 'p3a';
+		$isi['content'] = 'p3a/p3a-peta';
+		$isi['sidebar'] = 'sidebar/sidebar-p3a';
 
 		$this->load->view('template', $isi);		
 	}	
