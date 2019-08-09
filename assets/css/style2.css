@@ -576,12 +576,6 @@ footer{
 
 
 
-
-
-
-
-
-
 .list-container-2{
 	flex-direction: column;
 }
@@ -830,4 +824,22 @@ footer{
 }
 .card iframe{
 	/*height: 100px !important;*/
+}
+
+#demo-foo-filtering {
+	line-height: 1.2 !important;
+}
+#demo-foo-filtering th{
+	background-color: #002B5C !important;
+	color: #FFBA00 !important;
+}
+.footable-page a, .footable-page-arrow a{
+	padding: 5px 10px;
+	border: 1px solid #dee2e6;;
+}
+li .active{
+	background-color: black !important;
+}
+.footable.breakpoint > tbody > tr > td > span.footable-toggle {
+    padding-right: 5px !important;
 }

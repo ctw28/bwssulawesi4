@@ -23,8 +23,8 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Data Informasi SDA</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="<?= base_url()?>">Data SDA</a>
-                    <a class="dropdown-item" href="<?= base_url()?>">Peta SDA</a>
+                    <a class="dropdown-item" href="<?= base_url()?>data-info-sda/di">Data Infrastruktur</a>
+                    <a class="dropdown-item" href="<?= base_url()?>">Peta Sumber Daya Air</a>
                 </div>
             </li>
             <li class="nav-item dropdown">

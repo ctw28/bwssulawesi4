@@ -14,6 +14,10 @@ $route['p3a/peta-lokasi'] = 'p3a/peta_lokasi';
 $route['p3a/database-p3a'] = 'p3a/database_p3a';
 
 $route['tkpsda/dasar-pembentukan'] = 'tkpsda/dasar_pembentukan';
+$route['data-info-sda/daerah-irigasi'] = 'data_informasi_sda/di';
+$route['data-info-sda/air-tanah'] = 'data_informasi_sda/air_tanah';
+$route['data-info-sda/air-baku'] = 'data_informasi_sda/air_baku';
+$route['data-info-sda/daerah-irigasi'] = 'data_informasi_sda/di';
 
 
 
