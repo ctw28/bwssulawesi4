@@ -49,9 +49,9 @@
                     if($mulai>8){
                         $lat  = $filesop[65];
                         $long  = $filesop[66];
-                        $background = '#fff';
+                        $background = '#F0F9FC';
                         if($i % 2 == 0){
-                            $background = '#eee';
+                            $background = '#fff';
                         }
             ?>
             <tr style="background-color : <?= $background?> ;">

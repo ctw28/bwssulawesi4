@@ -11,7 +11,7 @@
                 <th data-hide="phone" rowspan="3" data-sort-ignore="true">Kabupaten</th>
                 <th data-hide="phone" rowspan="3" data-sort-ignore="true">Ketua</th>
                 <th data-hide="phone" rowspan="3" data-sort-ignore="true">Sekretaris</th>
-                <th data-hide="phone" rowspan="3" data-sort-ignore="true">Bendahara</th>
+                <th data-hide="phone, tablet, desktop"" rowspan="3" data-sort-ignore="true">Bendahara</th>
                 <th data-hide="phone" rowspan="3" data-sort-ignore="true">Pengamat</th>
                 <th data-hide="phone, tablet" rowspan="3" data-sort-ignore="true">Kepala Desa</th>
                 <th data-hide="phone, tablet, desktop" rowspan="3" data-sort-ignore="true">Kondisi Kelembagaan</th>
@@ -22,7 +22,7 @@
                 <th data-hide="phone, tablet, desktop" rowspan="3" data-sort-ignore="true">Koordinat</th>
             </tr>
         </thead>
-        <div class="form-inline m-b-20" style="margin-bottom:10px; ">
+        <div style="margin-bottom:10px; ">
             <div class="row">
                 <div class="col-sm-6 text-xs-center" >
                     <div class="form-group" style="display:none;">

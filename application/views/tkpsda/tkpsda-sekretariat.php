@@ -4,7 +4,7 @@
 <h4>VISI</h4>
 <p><i>Sekretariat TKPSDA memiliki visi sebagai inisiator, fasilitator dan motor pembangun sinergi antar stakeholder dalam pengelolaan SDA WS</i></p>
 <h4>MISI</h4>
-<ul>
+<ul class="fa-ul">
 	<li><i class="fa fa-check-square"></i>Mendukung Pelaksanaan Tugas dan Fungsi TKPSDA WS;</li>
 	<li><i class="fa fa-check-square"></i>Memfasilitasi Penyediaan Tenaga Ahli/Pakar/Narasumber;</li>
 	<li><i class="fa fa-check-square"></i>Menyelenggarakan Administrasi Kesekretariatan;</li>

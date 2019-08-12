@@ -23,18 +23,14 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Data Informasi SDA</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="<?= base_url()?>data-info-sda/di">Data Infrastruktur</a>
+                    <a class="dropdown-item" href="<?= base_url()?>data-info-sda">Data Infrastruktur</a>
                     <a class="dropdown-item" href="<?= base_url()?>">Peta Sumber Daya Air</a>
                 </div>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publikasi</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="<?= base_url()?>">Buku Tahunan</a>
-                    <a class="dropdown-item" href="<?= base_url()?>">Leaflet</a>
-                    <a class="dropdown-item" href="<?= base_url()?>">Hidrologi</a>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url()?>publikasi">Publikasi</a>
             </li>
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Galeri</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -53,7 +49,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TKPSDA</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="<?= base_url()?>tkpsda/dasar-pembentukan">Dasar Pembentukan</a>
-                    <a class="dropdown-item" href="<?= base_url()?>tkpsda/tkpsda/keanggotaan">Keanggotaan</a>
+                    <a class="dropdown-item" href="<?= base_url()?>tkpsda/keanggotaan">Keanggotaan</a>
                     <a class="dropdown-item" href="<?= base_url()?>tkpsda/tugas">Tugas TKPSDA</a>
                     <a class="dropdown-item" href="<?= base_url()?>tkpsda/sekretariat">Sekretariat</a>
                     <a class="dropdown-item" href="<?= base_url()?>tkpsda/kegiatan">Kegiatan</a>
@@ -64,7 +60,6 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="<?= base_url()?>p3a/database-p3a">Database P3A</a>
                     <a class="dropdown-item" href="<?= base_url()?>p3a/peta-lokasi">Peta Lokasi P3A</a>
-                    <a class="dropdown-item" href="<?= base_url()?>p3a/usulan">Usulan Perbaikan</a>
                 </div>
             </li>
             <li class="nav-item">

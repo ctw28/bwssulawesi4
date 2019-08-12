@@ -52,8 +52,12 @@
                         if($mulai>=7){
                         $lat  = strip_tags($filesop[46]);
                         $long  = $filesop[47];
-                ?>
-                <tr>
+                        $background = '#F0F9FC';
+                        if($i % 2 == 0){
+                            $background = '#fff';
+                        }
+            ?>
+            <tr style="background-color : <?= $background?> ;">
                     <td><?= $i ?></td>
                     <td><?= $filesop[1] ?></td>
                     <td><?= $filesop[2] ?></td>

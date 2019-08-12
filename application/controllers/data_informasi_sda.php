@@ -5,7 +5,7 @@ class Data_informasi_sda extends CI_Controller {
 	public function index()
 	{
 		$this->load->model('model_web');
-		$isi['pemberitahuan'] = $this->model_web->pemberitahuan();		
+		$isi['sidebar'] = 'sidebar/sidebar-data-info-sda';
 		$isi['content'] = 'data-info-sda/sda-keterangan';
 		$this->load->view('template', $isi);
 	}

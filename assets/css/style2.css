@@ -843,3 +843,10 @@ li .active{
 .footable.breakpoint > tbody > tr > td > span.footable-toggle {
     padding-right: 5px !important;
 }
+
+.fa-ul{
+	margin-left: 0px;
+}
+.fa-ul i{
+	margin-right: 1%;
+}

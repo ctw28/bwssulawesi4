@@ -8,7 +8,7 @@
 <div id="map" style="height: 600px; width: 100%;"></div>
 
     <script>
-    var iconBase = 'http://sda.pu.go.id/bwssulawesi4/assets/images/logo/';
+    var iconBase = 'http://localhost/bwssulawesi4/assets/images/logo/';
         var icons = {
           success: {
             icon: iconBase + 'map-marker-success.png'
@@ -35,7 +35,7 @@
         var infoWindow = new google.maps.InfoWindow;
 
           // Change this depending on the name of your PHP or XML file
-          downloadUrl('http://sda.pu.go.id/bwssulawesi4/index.php/p3a/peta_lokasi_xml', function(data) {
+          downloadUrl('http://localhost/bwssulawesi4/index.php/p3a/peta_lokasi_xml', function(data) {
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('marker');
             var i=1;
