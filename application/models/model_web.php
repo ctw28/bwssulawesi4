@@ -18,19 +18,14 @@ class Model_web extends CI_model {
 
 	// BERITA //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	public function berita_utama()
+	public function news()
 	{
-		return $this->db->query("SELECT * FROM t_berita ORDER BY tanggal_publish DESC LIMIT 1");
+		return $this->db->query("SELECT * FROM t_berita ORDER BY tanggal_publish DESC LIMIT 6");
 	}
 
 	public function berita_terbaru()
 	{
 		return $this->db->query("SELECT * FROM t_berita ORDER BY tanggal_publish DESC LIMIT 5");
-	}
-
-	public function berita_lainnya()
-	{
-		return $this->db->query("SELECT * FROM t_berita ORDER BY tanggal_publish DESC LIMIT 1,5");
 	}
 
 	public function berita_foto_lainnya($id)

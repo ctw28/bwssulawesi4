@@ -7,6 +7,6 @@
         <a href="<?= base_url()?>data-info-sda/pantai"><li><i class="fa fa-caret-right"></i> Pantai</li></a>
         <a href="<?= base_url()?>data-info-sda/sungai"><li><i class="fa fa-caret-right"></i> Sungai</li></a>
         <a href="<?= base_url()?>data-info-sda/air-tanah"><li><i class="fa fa-caret-right"></i> Air Tanah</li></a>
-        <a href="<?= base_url()?>data-info-sda/air-baku"><li><i class="fa fa-caret-right"></i> Air baku</li></a>
+        <a href="<?= base_url()?>data-info-sda/air-baku	"><li><i class="fa fa-caret-right"></i> Air baku</li></a>
     </ul>
 </div>

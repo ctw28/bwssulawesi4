@@ -9,10 +9,9 @@ class notfound extends CI_Controller {
 	}
 	public function index()
 	{
-		$isi['content'] = 'error-404.php';
-		$isi['sidebar'] = 'news';
 		$isi['terbaru']	= $this->model_web->berita_terbaru();;
-
+		$isi['content'] = 'error-404.php';
+		$isi['sidebar'] = 'sidebar/sidebar-news';
 		$this->load->view('template', $isi);
 	}
 }
