@@ -20,20 +20,20 @@
 	<!-- <hr> -->
 
 
-	<img src="<?= base_url()?>assets/images/berita/thumbs/thumb_1000X1000_<?= $foto ?>" style="width:100%; margin:10px 0 15px 0;">
+	<img alt="<?= $judul; ?>" src="<?= base_url()?>assets/images/berita/thumbs/thumb_1000X1000_<?= $foto ?>" style="width:100%; margin:10px 0 15px 0;">
 		
 	<section>
 	<?php
 		if (!empty($foto_lain)) {
 		?>
-		<!-- <h6>Galeri Foto</h6> -->
+		<h6>Galeri Foto</h6>
 		<div class="news-gallery">
 	  	<?php 
 	        foreach ($foto_lain->result() as $row) {
 	    ?>		
 	  		<div class="news-gallery-item">
 		  		<a class="fancybox" rel="group" href="<?= base_url()?>assets/images/berita/galeri-berita/<?= $row->foto ?>">
-				<img src="<?= base_url()?>assets/images/berita/galeri-berita/thumb_300X300_<?= $row->foto ?>"></a>
+				<img alt="image" src="<?= base_url()?>assets/images/berita/galeri-berita/thumb_300X300_<?= $row->foto ?>"></a>
 			</div>
 	  <?php } }?>
 	  <!-- <small class="pull-right">Lihat Semua Galeri Foto >></small> -->
@@ -79,21 +79,21 @@
 <h4 style="text-align: center; margin-top: 20px;">Berita Terkait</h4> 
 <section class="list-container">
     <div class="list-item-terkait">
-        <img src="<?= base_url()?>assets/images/c.jpg">
+        <img alt="images" src="<?= base_url()?>assets/images/c.jpg">
         <div class="list-item-title-3">
-            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
+            <h5><a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a></h5>
         </div>
     </div>
     <div class="list-item-terkait">
-        <img src="<?= base_url()?>assets/images/b.jpg">
+        <img alt="images" src="<?= base_url()?>assets/images/b.jpg">
         <div class="list-item-title-3">
-            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
+            <h5><a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a></h5>
         </div>
     </div>
     <div class="list-item-terkait">
-        <img src="<?= base_url()?>assets/images/e.jpg">
+        <img alt="images" src="<?= base_url()?>assets/images/e.jpg">
         <div class="list-item-title-3">
-            <a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a>
+            <h5><a href="">Kunjungan Menteri PUPR di Bendungan ladongi</a></h5>
         </div>
     </div>
 </section>

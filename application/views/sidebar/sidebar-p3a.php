@@ -1,4 +1,4 @@
-<div class="title-container-content"><i class="fa fa-bullhorn "></i> P3A</div>
+<div class="content-title"><i class="fa fa-bullhorn "></i> P3A</div>
 <div class="list-item-2">
     <ul class="content-container "> 
         <a href="<?= base_url()?>p3a/database-p3a"><li><i class="fa fa-caret-right"></i> Database P3A</li></a>

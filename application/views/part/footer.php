@@ -24,5 +24,5 @@
                     </div>
 
                     <div id="copyright">
-                        Copyright © 2018. Unit SISDA BWS Sulawesi IV Kendari | All Rights Reserved | Tersertifikasi ISO 9001:2015
+                        Copyright &copy; 2018. Unit SISDA BWS Sulawesi IV Kendari | All Rights Reserved | Tersertifikasi ISO 9001:2015
                     </div>

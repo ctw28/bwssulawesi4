@@ -18,7 +18,7 @@
             <?= $this->load->view('part/header');?>
             <?= $this->load->view('part/menu');?>
             <?= $this->load->view('part/support-section');?>
-            <section class="col-12 content">
+            <div class="col-12 content">
             	  <div class="row">            		
                 		<div class="col-md-3 col-sm-12 mobile-hide">
     	            		  <?= $this->load->view($sidebar);?>
@@ -27,7 +27,7 @@
     	            			<?= $this->load->view($content); ?>
                 		</div>
         		    </div>  <!-- END row KONTEN -->  
-            </section> <!-- END col-12 KONTEN -->
+            </div> <!-- END col-12 KONTEN -->
             <footer>
                 <?= $this->load->view('part/footer');?>              
             </footer>

@@ -1,4 +1,4 @@
-<div class="title-container-content"><i class="fa fa-bullhorn "></i> Data Sumber Daya Air</div>
+<div class="content-title"><i class="fa fa-bullhorn "></i> Data Sumber Daya Air</div>
 <div class="list-item-2">
     <ul class="content-container "> 
         <a href="<?= base_url()?>data-info-sda/daerah-irigasi"><li><i class="fa fa-caret-right"></i> Daerah Irigasi</li></a>

@@ -1,4 +1,4 @@
-<div class="title-container-content"><i class="fa fa-list"></i> Berita Terbaru</div>
+<div class="content-title"><i class="fa fa-list"></i> Berita Terbaru</div>
 <section class="list-container">
 <div class="content-container" style="padding: 10px;">
 	<?php 
@@ -20,9 +20,9 @@
     ?>
 
     <div class="list-item-5">
-        <img src="<?= base_url()?>assets/images/berita/thumbs/thumb_300X300_<?php echo $row->foto ?>">
+        <img alt="images" src="<?= base_url()?>assets/images/berita/thumbs/thumb_300X300_<?php echo $row->foto ?>">
         <div class="list-item-title-5"><p>
-            <a href="<?= base_url()?>news/<?php echo urlencode($judul); ?>"><?= substr($row->judul_berita,0, 45)?> ...</a></p>
+            <h5><a href="<?= base_url()?>news/<?php echo urlencode($judul); ?>"><?= substr($row->judul_berita,0, 45)?> ...</a></h5>
             <small>Jumat, 03 Agustus 	2019</small>
         </div>
     </div>
@@ -31,6 +31,6 @@
 </section>
 <div class="container-3">
     <div class="poster">
-        <img src="<?= base_url()?>assets/images/banner.jpg">
+        <img alt="images" src="<?= base_url()?>assets/images/banner.jpg">
     </div>
 </div>

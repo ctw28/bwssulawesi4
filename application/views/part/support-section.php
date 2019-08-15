@@ -1,5 +1,5 @@
                 <!-- SUPPORT SECTION -->
-                <section class="support-section">
+                <div class="support-section">
                     <div class="breaking-news-ticker" id="info" style="height: 20px;">
                         <div class="bn-label">Kilas Informasi</div>
                         <div class="bn-news">
@@ -18,9 +18,9 @@
                         <a href="#" class="fa fa-youtube-play"></a>
                         <a href="#" class="fa fa-instagram"></a>
                     </div>
-                </section>
-                <section class="help-section">
+                </div>
+                <div class="help-section">
                     <div class="search-container">
                         <input type="text" name="search">
                     </div>
-                </section>
+                </div>

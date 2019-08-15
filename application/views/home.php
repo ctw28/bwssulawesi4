@@ -19,11 +19,11 @@
         </div>
     </div>
     <div class="container main">
-        <section class="col-12 content">
+        <div class="col-12 content">
             <div class="row">
                 <?= $this->load->view('part/home');?>
             </div>  <!-- END row KONTEN -->  
-        </section> <!-- END col-12 KONTEN -->
+        </div> <!-- END col-12 KONTEN -->
         <div class="row">
             <footer>
                 <?= $this->load->view('part/footer');?>              
