@@ -61,24 +61,24 @@ class Model_web extends CI_model {
 
 	//GALERI FOTO HOME
 
-	public function tampil_album()
+	public function showAlbum($kategori)
 	{
-		// $data="SELECT * FROM t_galeri_foto_album a INNER JOIN t_galeri_foto g ON a.id_album=g.id_album ORDER BY a.tgl_buat DESC LIMIT 3";
-		$data="SELECT * FROM t_galeri_foto_album ORDER BY tgl_buat ";
+		$data="SELECT * FROM t_galeri_kategori tk INNER JOIN t_galeri_foto_album tf ON tk.id_galeri_kategori = tf.id_galeri_kategori WHERE tk.kategori_seo='$kategori'";
+		return $this->db->query($data);
+	}
+	public function getAlbumCover($AlbumId){		
+		$data="SELECT foto FROM t_galeri_foto WHERE id_album=$AlbumId LIMIT 1";
+		return $this->db->query($data)->result();
+	}
+	public function getGaleriKategori()
+	{
+		$data="SELECT * FROM t_galeri_kategori";
 		return $this->db->query($data);
 	}
 
-	public function tampil_foto()
+	public function showPhotos($albumSeo)
 	{
-		// $data="SELECT * FROM t_galeri_foto_album a INNER JOIN t_galeri_foto g ON a.id_album=g.id_album ORDER BY a.tgl_buat DESC LIMIT 3";
-		$data="SELECT * FROM t_galeri_foto ORDER BY id_foto";
-		return $this->db->query($data);
-	}
-
-	public function tampil_foto_album($key)
-	{
-		// $data="SELECT * FROM t_galeri_foto_album a INNER JOIN t_galeri_foto g ON a.id_album=g.id_album ORDER BY a.tgl_buat DESC LIMIT 3";
-		$data="SELECT * FROM t_galeri_foto WHERE id_album ='$key'";
+		$data="SELECT * FROM t_galeri_foto_album ta INNER JOIN t_galeri_foto tf ON ta.id_album=tf.id_album WHERE judul_album_seo ='$albumSeo'";
 		return $this->db->query($data);
 	}
 
