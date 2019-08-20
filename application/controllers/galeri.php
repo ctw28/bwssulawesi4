@@ -8,11 +8,11 @@ class Galeri extends CI_Controller {
 		$this->load->model('model_web');
 	}
 	
-	public function album()
+	public function foto()
 	{
 		if(empty($this->uri->segment(3)))
 		{
-			redirect('galeri/album/infrastruktur');
+			redirect('galeri/foto/infrastruktur');
 		}
 		else {
 			$kategori = $this->uri->segment(3);
@@ -20,6 +20,7 @@ class Galeri extends CI_Controller {
 		$albums = $this->model_web->showAlbum($kategori);
 		$i=0;
 		foreach ($albums->result() as $row) {
+			$isi['kategoriTitle'] = $row->nama_kategori;
 			$data[$i] = $this->model_web->getAlbumCover($row->id_album);
 			$data[$i]['albumTitleSeo'] = $row->judul_album_seo;
 			$data[$i]['albumTitle'] = $row->judul_album;
@@ -29,25 +30,32 @@ class Galeri extends CI_Controller {
 		$isi['albumCount'] 	= $albums->num_rows();
 		$isi['sideMenu'] 	= $this->model_web->getGaleriKategori();
 
-		$isi['content'] = 'galeri/album-tampil';
+		$isi['content'] = 'galeri/foto-tampil';
 		$isi['sidebar'] = 'sidebar/sidebar-galeri-foto';
 		$this->load->view('template', $isi);
 	}	
 
-	public function foto()
+	public function album()
 	{
 		$album = $this->uri->segment(3);
-		$isi['photos'] = $this->model_web->showPhotos($album);
-		$isi['photosCount'] 	= $isi['photos']->num_rows();
 		$isi['sideMenu'] 	= $this->model_web->getGaleriKategori();
-
-		$isi['content'] = 'galeri/foto-tampil';
-		$isi['sidebar'] = 'sidebar/sidebar-galeri-foto';
+		$photos 			= $this->model_web->showPhotos($album);
+		$isi['photosCount'] = $photos->num_rows();
+		foreach ($photos->result() as $photo) {
+			$isi['albumId'] = $photo->id_album;
+			$isi['albumTitle'] = $photo->judul_album;
+			$isi['uploadedDate'] = $photo->tgl_buat;
+			$isi['uploadedBy'] = $photo->oleh;
+			$isi['photos'][] = $photo->foto;
+		}
+		$isi['content'] 	= 'galeri/album-tampil';
+		$isi['sidebar'] 	= 'sidebar/sidebar-galeri-foto';
 		$this->load->view('template', $isi);
 	}
 
 	public function video()
 	{
+		$isi['videos'] 	= $this->model_web->showVideos();
 		$isi['content'] = 'galeri/video';
 		$isi['sidebar'] = 'sidebar/sidebar-galeri-video';
 		$this->load->view('template', $isi);

@@ -18,14 +18,9 @@ class Model_web extends CI_model {
 
 	// BERITA //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	public function news()
+	public function news($limit=5)
 	{
-		return $this->db->query("SELECT * FROM t_berita ORDER BY tanggal_publish DESC LIMIT 6");
-	}
-
-	public function berita_terbaru()
-	{
-		return $this->db->query("SELECT * FROM t_berita ORDER BY tanggal_publish DESC LIMIT 5");
+		return $this->db->query("SELECT * FROM t_berita ORDER BY tanggal_publish DESC LIMIT $limit");
 	}
 
 	public function berita_foto_lainnya($id)
@@ -33,30 +28,7 @@ class Model_web extends CI_model {
 		return $this->db->query("SELECT * FROM t_berita_foto WHERE id_berita=$id LIMIT 4");
 	}
 
-	public function total_klik()
-	{
-		return $this->db->query("SELECT * FROM t_berita WHERE year(tanggal_publish)=2016 ORDER BY klik DESC LIMIT 5");
-	}
-	
-	public function berita_populer()
-	{
-		return $this->db->query("SELECT * FROM t_berita ORDER BY klik DESC, tanggal_publish DESC LIMIT 4");
-	}
 
-	public function berita_terkait()
-	{
-		return $this->db->query("SELECT * FROM t_berita ORDER BY RAND() LIMIT 4");
-	}	
-
-	public function semua_berita()
-	{
-		return $this->db->query("SELECT * FROM t_berita ORDER BY tanggal_publish DESC");
-	}
-
-	public function total_berita()
-	{
-		return mysql_num_rows(mysql_query("SELECT * FROM t_berita"));
-	}
 
 
 	//GALERI FOTO HOME
@@ -72,7 +44,7 @@ class Model_web extends CI_model {
 	}
 	public function getGaleriKategori()
 	{
-		$data="SELECT * FROM t_galeri_kategori";
+		$data="SELECT nama_kategori, kategori_seo, COUNT(*) as albumCount FROM t_galeri_foto_album ta INNER JOIN t_galeri_kategori tk ON ta.id_galeri_kategori=tk.id_galeri_kategori GROUP BY ta.id_galeri_kategori";
 		return $this->db->query($data);
 	}
 
@@ -82,6 +54,13 @@ class Model_web extends CI_model {
 		return $this->db->query($data);
 	}
 
+	// VIDEO ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	public function showVideos()
+	{
+		$data="SELECT * FROM t_galeri_video ORDER BY tgl_upload DESC";
+		return $this->db->query($data);
+	}
 	// AGENDA //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public function agenda()
@@ -99,13 +78,7 @@ class Model_web extends CI_model {
 	}
 
 
-	// VIDEO ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	public function tampil_video()
-	{
-		$data="SELECT * FROM t_galeri_video";
-		return $this->db->query($data);
-	}
 
 	// PENGADUAN ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -27,14 +27,19 @@
                                 <a class="dropdown-item" href="<?= base_url()?>">Peta Sumber Daya Air</a>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url()?>publikasi">Publikasi</a>
-                        </li>
 
                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publikasi</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="<?= base_url()?>publikasi/berita">Berita</a>
+                                <a class="dropdown-item" href="<?= base_url()?>publikasi/buku-tahunan">Buku Tahunan</a>
+                                <a class="dropdown-item" href="<?= base_url()?>publikasi/hidrologi">Publikasi Hidrologi</a>
+                                <a class="dropdown-item" href="<?= base_url()?>publikasi/tkpsda">Publikasi TKPSDA</a>
+                            </div>
+                        </li><li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Galeri</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="<?= base_url()?>galeri/album">Album Foto</a>
+                                <a class="dropdown-item" href="<?= base_url()?>galeri/foto">Album Foto</a>
                                 <a class="dropdown-item" href="<?= base_url()?>galeri/video">Video</a>
                             </div>
                         </li>

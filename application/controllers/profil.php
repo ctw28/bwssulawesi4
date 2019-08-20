@@ -44,9 +44,9 @@ class Profil extends CI_Controller {
 		$this->load->view('template', $isi);
 	}
 
-	public function kepegawaian()
+	public function lokasi()
 	{
-		$isi['content'] = 'profil/profil-kepegawaian';
+		$isi['content'] = 'profil/lokasi';
 		$isi['sidebar'] = 'sidebar/sidebar-profil';
 		$this->load->view('template', $isi);
 	}

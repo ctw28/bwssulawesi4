@@ -30,8 +30,7 @@ class Berita extends CI_Controller {
 		if($query->num_rows()==0){
 			redirect('berita');
 		}
-
-		if($query->num_rows()>0){
+		else if($query->num_rows()>0){
 			foreach ($query -> result() as $row) {
 				$isi['judul'] = $row->judul_berita;
 				$isi['tanggal'] = $row->tanggal_publish;
@@ -42,9 +41,12 @@ class Berita extends CI_Controller {
 				$isi['oleh'] = $row->by;			
 			}
 		}
-		$isi['terbaru']=$this->model_web->berita_terbaru();
-		$isi['populer']=$this->model_web->berita_populer();
-		$isi['terkait']=$this->model_web->berita_terkait();
+		$isi['terbaru']=$this->model_web->news();
+		foreach ($isi['terbaru'] -> result() as $row) {
+			$row->newsUrl = $this->newsUrl($row->judul_berita);
+			$row->newsDate = $this->ChangeIndonesiaFormat($row->tanggal_publish);
+            $row->newsTitle = substr($row->judul_berita,0, 15);
+		}
 		$isi['foto_lain']=$this->model_web->berita_foto_lainnya($id);
 
 		$isi['title'] = ucwords($key);
@@ -52,6 +54,42 @@ class Berita extends CI_Controller {
 		$this->load->view('template', $isi);		
 
 	}	
+
+	function newsUrl($newsTitle){
+      	$string = htmlentities($newsTitle);
+        $trim=trim($string);
+        $url = strtolower(str_replace(" ", "-", $trim));
+        return $url;
+	}
+
+    function limitWords($string, $word_limit){
+        $words = explode(" ",$string);
+        return implode(" ",array_splice($words,0,$word_limit));
+    }
+
+    function ChangeIndonesiaFormat($dateTime){
+        $year = date("Y", strtotime($dateTime));
+        $date = date("d", strtotime($dateTime));
+        $day = date("w", strtotime($dateTime));
+        $month = date("n", strtotime($dateTime));
+        $time = date("H:i", strtotime($dateTime));
+        $dayName = array("Minggu","Senin", "Selasa","Rabu", "Kamis","Jumat","Sabtu");
+        $monthName = array("","Jan", "Feb","Mar", "Apr","Mei","Juni","Juli", "Agust","Sept", "Okt","Nov","Des");
+        return $dayName[$day].", ".$date." ". $monthName[$month] ." ". $year." ".$time." WITA";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	public function semua()

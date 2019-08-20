@@ -6,11 +6,10 @@ class Beranda extends CI_Controller {
 	{
 		$this->load->model('model_web');
 
-		$news 					= $this->model_web->news();
+		$news 					= $this->model_web->news(6);
 		$isi['agenda']	        = $this->model_web->agenda();
 		$isi['pemberitahuan'] 	= $this->model_web->pemberitahuan();
 		$isi['pengumuman'] 		= $this->model_web->pengumuman();
-		$isi['Videos'] 			= $this->model_web->tampil_video();
 		
 
 		$i=0;

@@ -8,7 +8,7 @@ $route['profil/visi-misi'] = 'profil/visi_misi';
 $route['profil/tugas-dan-fungsi'] = 'profil/tugas_dan_fungsi';
 $route['profil/struktur-organisasi'] = 'profil/struktur_organisasi';
 $route['profil/info-pejabat'] = 'profil/info_pejabat';
-$route['profil/lokasi-kantor'] = 'profil/lokasi_kantor';
+$route['profil/lokasi-kantor'] = 'profil/lokasi';
 
 $route['p3a/peta-lokasi'] = 'p3a/peta_lokasi';
 $route['p3a/database-p3a'] = 'p3a/database_p3a';

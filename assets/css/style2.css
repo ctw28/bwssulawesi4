@@ -4,6 +4,9 @@ body{
 	background: url(../../assets/images/main-background.png);
 	background-color: #eee;
 }
+a{
+	color: #555;	
+}
 body, p, h5{
 	font-size: 11pt;
 }
