@@ -10,8 +10,8 @@
   <!-- Style -->
   <link href="<?= base_url()?>assets/css/style2.css" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url()?>assets/plugins/news-ticker/breaking-news-ticker.css">
-    <link href="<?php echo base_url()?>assets/plugins/footable/css/footable.core.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/plugins/fancybox/jquery.fancybox.min.css">
+  <link href="<?php echo base_url()?>assets/plugins/footable/css/footable.core.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/plugins/fancybox/jquery.fancybox.min.css">
 <!-- ShareThis BEGIN -->
 <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=5d5b8c94c60153001277be70&product=sticky-share-buttons"></script>
 <!-- ShareThis END -->

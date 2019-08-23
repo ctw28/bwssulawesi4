@@ -4,16 +4,16 @@
         <thead style="background-color:#336633 !important;">
             <tr style="background-color:#336633 !important;">
                 <th data-toggle="true" rowspan="3" data-sort-ignore="true" width="6%">No.</th>
-                <th rowspan="3" data-sort-ignore="true" width="15%">Nama DI</th>
+                <th data-hide="phone, tablet" rowspan="3" data-sort-ignore="true" width="15%">Nama DI</th>
                 <th rowspan="3" data-sort-ignore="true" width="10%">Nama P3A</th>
                 <th data-hide="phone" rowspan="3" data-sort-ignore="true">Desa</th>
                 <th data-hide="phone" rowspan="3" data-sort-ignore="true">Kecamatan</th>
                 <th data-hide="phone" rowspan="3" data-sort-ignore="true">Kabupaten</th>
                 <th data-hide="phone" rowspan="3" data-sort-ignore="true">Ketua</th>
-                <th data-hide="phone" rowspan="3" data-sort-ignore="true">Sekretaris</th>
-                <th data-hide="phone, tablet, desktop"" rowspan="3" data-sort-ignore="true">Bendahara</th>
-                <th data-hide="phone" rowspan="3" data-sort-ignore="true">Pengamat</th>
-                <th data-hide="phone, tablet" rowspan="3" data-sort-ignore="true">Kepala Desa</th>
+                <th data-hide="phone, tablet" rowspan="3" data-sort-ignore="true">Sekretaris</th>
+                <th data-hide="phone, tablet"" rowspan="3" data-sort-ignore="true">Bendahara</th>
+                <th data-hide="phone, tablet" rowspan="3" data-sort-ignore="true">Pengamat</th>
+                <th data-hide="phone" rowspan="3" data-sort-ignore="true">Kepala Desa</th>
                 <th data-hide="phone, tablet, desktop" rowspan="3" data-sort-ignore="true">Kondisi Kelembagaan</th>
                 <th data-hide="phone, tablet, desktop" rowspan="3" data-sort-ignore="true">Iuran</th>
                 <th data-hide="phone, tablet, desktop" rowspan="3" data-sort-ignore="true">Status Badan Hukum</th>

@@ -17,8 +17,8 @@
 		<div class="news-info-item"><i class="fa fa-user" ></i><span>Sisda</span></div>
 		<div class="news-info-item"><i class="fa fa-eye"></i><span><?= $klik ?> Kali dilihat</span></div>
 	</div>
+	<div class="sharethis-inline-share-buttons"></div>
 	<!-- <hr> -->
-
 
 	<img alt="<?= $judul; ?>" src="<?= base_url()?>assets/images/berita/thumbs/thumb_1000X1000_<?= $foto ?>" style="width:100%; margin:10px 0 15px 0;">
 		
@@ -44,8 +44,7 @@
 	</div>
 </article>
 	
-		Bagikan : 
-		<div class="sharethis-inline-share-buttons"></div>
+		
 
 <hr>
 <h4 style="text-align: center; margin-top: 20px;">Berita Terkait</h4> 

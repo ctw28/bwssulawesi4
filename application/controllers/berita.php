@@ -48,9 +48,7 @@ class Berita extends CI_Controller {
             $row->newsTitle = substr($row->judul_berita,0, 15);
 		}
 		$isi['foto_lain']=$this->model_web->berita_foto_lainnya($id);
-
 		$isi['title'] = ucwords($key);
-
 		$this->load->view('template', $isi);		
 
 	}	

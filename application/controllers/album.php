@@ -37,7 +37,6 @@ class Album extends CI_Controller {
 
 	public function semua_album(){
 		$isi['content'] = 'album-semua';
-		// $isi['sidebar'] = 'berita-sidebar';
 		$this->load->model('model_web');
 		$isi['pemberitahuan'] = $this->model_web->pemberitahuan();		
 		$isi['foto'] = $this->model_web->tampil_foto();

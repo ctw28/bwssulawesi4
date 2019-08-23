@@ -42,7 +42,7 @@
 
                 <section>
                     <div class="content-title"><i class="fa fa-list"></i> Berita BWS Sulawesi IV Kendari
-                        <a class="pull-right" href="#">Lihat Semua <i class="fa fa-angle-double-right "></i></a>
+                        <a class="pull-right" href="<?= base_url()?>publikasi/berita">Lihat Semua <i class="fa fa-angle-double-right "></i></a>
                     </div>
                     <div class="list-container">
                         <?php 

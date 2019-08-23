@@ -28,12 +28,12 @@ class Data_informasi_sda extends CI_Controller {
                 $i % 2 == 0 ? $background = 'F0F9FC' : $background = 'fff';
                 $data[$i]['background'] = $background;
                 $data[$i][] = $i+1;
-                $data[$i][] = $filesop[1] ;
+                $data[$i][] = $filesop[1];
                 $data[$i][] = $filesop[2];
-                $data[$i][] = $filesop[3] ;
+                $data[$i][] = $filesop[3];
                 $data[$i][] = $filesop[7];
                 $data[$i][] = $filesop[8];
-                $data[$i][] = $filesop[9] ;
+                $data[$i][] = $filesop[9];
                 $data[$i][] = $filesop[10];
                 $data[$i][] = $lat." , ".$long;
                 $i++;                

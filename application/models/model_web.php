@@ -18,9 +18,9 @@ class Model_web extends CI_model {
 
 	// BERITA //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	public function news($limit=5)
+	public function news($limit=5, $offset=0)
 	{
-		return $this->db->query("SELECT * FROM t_berita ORDER BY tanggal_publish DESC LIMIT $limit");
+		return $this->db->query("SELECT * FROM t_berita ORDER BY tanggal_publish DESC LIMIT $limit OFFSET $offset");
 	}
 
 	public function berita_foto_lainnya($id)

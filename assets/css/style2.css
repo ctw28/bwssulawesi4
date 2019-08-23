@@ -516,6 +516,10 @@ footer{
 	font-weight: 550;
 }
 
+.all-news a{
+	font-size: 16pt;
+}
+
 .paragraf-berita{
 	text-align: justify;
 	font-size: 11.5pt;
