@@ -21,9 +21,9 @@ li{
 	list-style-type: none;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, dl, ol, ul{
+/*.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, dl, ol, ul{
 	margin-bottom: 0;
-}
+}*/
 
 .content-title, .headline, .support-section, .poster, .list-container, footer{
 	margin-top: 20px;	
@@ -288,7 +288,9 @@ img{
 .list-item-title-3 a{
 	color: #555;	
 }
-
+.list-item-title h5{
+	margin-bottom: 0;
+}
 .list-item-title-2 a{
 	color: #FFBA00;
 	font-weight: bold;
@@ -641,4 +643,22 @@ li .active{
 
 .video-main-2 iframe{
 	
+}
+
+.btn-custom{
+	border-radius: 3px;
+	padding: 5px 10px;
+}
+.btn-custom, .btn-custom i{
+	font-size: 9pt;
+}.btn-custom-2, .btn-custom-2 i{
+	font-size: 10pt;
+}
+
+.form-group input[type='text']{
+	padding: 5px;
+	border-radius: 2px;
+	font-size: 11pt;
+	color: #555;
+	border: 1px solid #999;
 }

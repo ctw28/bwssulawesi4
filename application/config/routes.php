@@ -20,6 +20,8 @@ $route['data-info-sda/air-baku'] = 'data_informasi_sda/air_baku';
 $route['data-info-sda/daerah-irigasi'] = 'data_informasi_sda/di';
 $route['data-info-sda'] = 'data_informasi_sda';
 
+$route['publikasi/buku-tahunan'] = 'publikasi/buku_tahunan';
+
 
 
 

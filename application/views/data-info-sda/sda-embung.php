@@ -33,7 +33,7 @@
             </div>
             <div class="col-sm-12 text-xs-center text-right">
                 <div class="form-group">
-                    <input id="demo-foo-search" type="text" placeholder="Cari bendung" class="input-md" autocomplete="on">
+                    <input id="demo-foo-search" type="text" placeholder="Cari Embung" class="input-md" autocomplete="on">
                 </div>
             </div>
         </div>

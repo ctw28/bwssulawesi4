@@ -29,7 +29,7 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publikasi</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown7" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publikasi</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="<?= base_url()?>publikasi/berita">Berita</a>
                                 <a class="dropdown-item" href="<?= base_url()?>publikasi/buku-tahunan">Buku Tahunan</a>

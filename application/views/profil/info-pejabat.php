@@ -6,7 +6,7 @@
 		    	<img class="card-img-top" src="<?=base_url()?>assets/images/profil/kepala-bws-sulawesi-4-kendari.jpg" alt="kepala-bws-sulawesi-4-kendari.jpg">
 			    <div class="card-body">
 			    	<h5 class="card-text"><b>KEPALA BWS SULAWESI IV KENDARI</b></h5>
-			    	<button class="btn btn-info">Lihat Profil</button>
+			    	<button class="btn btn-warning btn-custom-2"><i class="fa fa-eye"></i> Lihat Profil</button>
 			    </div>
 		  	</div>
 		</div>
@@ -15,7 +15,7 @@
 		    	<img class="card-img-top" src="<?=base_url()?>assets/images/profil/kepala-bws-sulawesi-4-kendari.jpg" alt="kepala-bws-sulawesi-4-kendari.jpg">
 			    <div class="card-body">
 			    	<h5 class="card-text"><b>KEPALA BWS SULAWESI IV KENDARI</b></h5>
-			    	<button class="btn btn-info">Lihat Profil</button>
+			    	<button class="btn btn-warning btn-custom-2"><i class="fa fa-eye"></i> Lihat Profil</button>
 			    </div>
 		  	</div>
 		</div>
@@ -24,7 +24,7 @@
 		    	<img class="card-img-top" src="<?=base_url()?>assets/images/profil/kepala-bws-sulawesi-4-kendari.jpg" alt="kepala-bws-sulawesi-4-kendari.jpg">
 			    <div class="card-body">
 			    	<h5 class="card-text"><b>KEPALA BWS SULAWESI IV KENDARI</b></h5>
-			    	<button class="btn btn-info">Lihat Profil</button>
+			    	<button class="btn btn-warning btn-custom-2"><i class="fa fa-eye"></i> Lihat Profil</button>
 			    </div>
 		  	</div>
 		</div>
@@ -33,7 +33,7 @@
 		    	<img class="card-img-top" src="<?=base_url()?>assets/images/profil/kepala-bws-sulawesi-4-kendari.jpg" alt="kepala-bws-sulawesi-4-kendari.jpg">
 			    <div class="card-body">
 			    	<h5 class="card-text"><b>KEPALA BWS SULAWESI IV KENDARI</b></h5>
-			    	<button class="btn btn-info">Lihat Profil</button>
+			    	<button class="btn btn-warning btn-custom-2"><i class="fa fa-eye"></i> Lihat Profil</button>
 			    </div>
 		  	</div>
 		</div>

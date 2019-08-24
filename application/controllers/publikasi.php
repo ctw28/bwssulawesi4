@@ -34,6 +34,22 @@ class Publikasi extends CI_Controller {
 		$this->load->view('template', $isi);
 	}
 
+	public function buku_tahunan()
+	{
+		$isi['content'] = 'publikasi/buku-tahunan';
+		$isi['sidebar'] = 'sidebar/sidebar-publikasi';
+		
+		$this->load->view('template', $isi);
+	}
+
+	public function hidrologi()
+	{
+		$isi['content'] = 'publikasi/hidrologi';
+		$isi['sidebar'] = 'sidebar/sidebar-publikasi';
+		
+		$this->load->view('template', $isi);
+	}
+
 
 	function newsUrl($newsTitle){
       	$string = htmlentities($newsTitle);
