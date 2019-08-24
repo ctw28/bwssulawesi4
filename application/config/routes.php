@@ -28,6 +28,8 @@ $route['publikasi/buku-tahunan'] = 'publikasi/buku_tahunan';
 $route['peta-kegiatan/(:any)'] = 'peta_kegiatan/$1'; 
 $route['data-info-sda/(:any)'] = 'data_informasi_sda/$1'; 
 $route['permintaan-data'] = 'permintaan_data'; 
+$route['permintaan-data/online'] = 'permintaan_data/online'; 
+$route['permintaan-data/manual'] = 'permintaan_data/manual'; 
 
 $route['404_override'] = 'notfound';
 $route['translate_uri_dashes'] = FALSE;
