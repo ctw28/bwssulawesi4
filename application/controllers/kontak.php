@@ -31,7 +31,8 @@ class Kontak extends CI_Controller {
         $url = strtolower(str_replace(" ", "-", $trim));
         return $url;
 	}
-	    function limitWords($string, $word_limit){
+    
+    function limitWords($string, $word_limit){
         $words = explode(" ",$string);
         return implode(" ",array_splice($words,0,$word_limit));
     }

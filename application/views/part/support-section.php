@@ -19,8 +19,4 @@
                         <a href="#" class="fa fa-instagram"></a>
                     </div>
                 </div>
-                <div class="help-section">
-                    <div class="search-container">
-                        <input type="text" name="search">
-                    </div>
-                </div>
+
