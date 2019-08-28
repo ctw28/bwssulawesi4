@@ -1,4 +1,6 @@
-<h2>Sejarah</h2>
+<h2 style="margin-bottom: 10px;">Sejarah</h2>
+<img src="<?= base_url()?>assets/images/kantor-bws-sulawesi-iv-kendari-top-view.jpg" alt="images" style="margin-bottom: 10px;">
+
 <p>Melalui ketentuan / Peraturan Surat Menteri PAN-RB No. B/3051/M.PAN/11/2008 tertanggal 05 November 2008 Perihal Penataan UPT di Lingkungan Kementerian PU BWS Sulawesi IV terbentuk (Tipe B).</p>
 <p>Adapun dasar organisasi terbentuknya BWS Sulawesi IV Kendari sebagai berikut :</p>
 <ul>

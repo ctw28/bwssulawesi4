@@ -12,6 +12,31 @@ class Data_informasi_sda extends CI_Controller {
 		$isi['content'] = 'data-info-sda/sda-keterangan';
 		$this->load->view('template', $isi);
 	}
+
+	public function peta_ws_sultra()
+	{
+		$isi['sidebar'] = 'sidebar/sidebar-peta-sda';
+		$isi['content'] = 'data-info-sda/peta-ws-sultra';
+		$this->load->view('template', $isi);
+	}
+	public function peta_ws()
+	{
+		$isi['sidebar'] = 'sidebar/sidebar-peta-sda';
+		$isi['content'] = 'data-info-sda/peta-ws';
+		$this->load->view('template', $isi);
+	}
+	public function peta_infrastruktur()
+	{
+		$isi['sidebar'] = 'sidebar/sidebar-peta-sda';
+		$isi['content'] = 'data-info-sda/peta-infrastruktur';
+		$this->load->view('template', $isi);
+	}
+	public function peta_hidrologi()
+	{
+		$isi['sidebar'] = 'sidebar/sidebar-peta-sda';
+		$isi['content'] = 'data-info-sda/peta-hidrologi';
+		$this->load->view('template', $isi);
+	}
 	
 	public function di()
 	{

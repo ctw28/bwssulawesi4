@@ -10,7 +10,12 @@ class Beranda extends CI_Controller {
 		$isi['agenda']	        = $this->model_web->agenda();
 		$isi['pemberitahuan'] 	= $this->model_web->pemberitahuan();
 		$isi['pengumuman'] 		= $this->model_web->pengumuman();
+        $videos          = $this->model_web->showVideosByLimit(3);
 		
+        foreach ($videos->result() as $video) {
+            $isi['videos']['videoThumb'][] = $video->img_thumb;
+            $isi['videos']['videoEmbed'][] = $video->embed_url;
+        }
 
 		$i=0;
         foreach ($news->result() as $value) {
@@ -32,7 +37,7 @@ class Beranda extends CI_Controller {
             $tes->detail_agenda = $this->textToHTML($tes->detail_agenda);
             $tes->tgl_agenda = $this->ChangeIndonesiaFormat($tes->tgl_agenda);
         }
-        // echo json_encode($agenda->result());
+        // echo json_encode($isi['videos']);
 		$this->load->view('home', $isi);
 	}
 

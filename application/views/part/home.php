@@ -13,17 +13,20 @@
 
                     <div class="main-videos">
                         <div class="video-main-1">
-                            <div class="embed-responsive embed-responsive-21by9">
-                               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FnJ9T7jMvCo" allowfullscreen></iframe>
-                            </div>
+                            <a data-fancybox href="<?= $videos['videoEmbed'][0] ?>">
+                                <div class="play"></div>
+                                <img alt="video-thumb" src="<?= $videos['videoThumb'][0]?>">
+                            </a>
                         </div>
                         <div class="video-main-2">
-                            <div class="embed-responsive embed-responsive-21by9">
-                                <iframe src="https://www.youtube.com/embed/mmKjbxASGlQ" allowfullscreen></iframe>
-                            </div>
-                            <div class="embed-responsive embed-responsive-21by9">
-                                <iframe src="https://www.youtube.com/embed/V6wAyXetXDY" allowfullscreen></iframe>
-                            </div>
+                            <a data-fancybox href="<?= $videos['videoEmbed'][1] ?>">
+                                <div class="play"></div>
+                                <img alt="video-thumb" src="<?= $videos['videoThumb'][1]?>">
+                            </a>
+                            <a data-fancybox href="<?= $videos['videoEmbed'][2] ?>">
+                                <div class="play"></div>
+                                <img alt="video-thumb" src="<?= $videos['videoThumb'][2]?>">
+                            </a>
                         </div>
                     </div>
                 </section>
@@ -94,11 +97,14 @@
                         
                         <div class="content-title"><i class="fa fa-bullseye "></i> Poling</div>
                         <div class="content-container poling">
-                            <p>Apa Pendapat Anda Tentang Tampilan Website ini ?</p>
-                            <input type="radio" name="opt" id="opt1" checked> <label for="opt1">Bagus Sekali</label>
-                            <input type="radio" name="opt" id="opt2"> <label for="opt2"> Bagus</label>
-                            <input type="radio" name="opt" id="opt3"> <label for="opt3"> Biasa</label>
-                            <input type="radio" name="opt" id="opt4"> <label for="opt4"> Kurang</label>
+                            <form action="">                            
+                                <p>Apa Pendapat Anda Tentang Tampilan Website ini ?</p>
+                                <input type="radio" name="opt" id="opt1" checked> <label for="opt1">Bagus Sekali</label>
+                                <input type="radio" name="opt" id="opt2"> <label for="opt2"> Bagus</label>
+                                <input type="radio" name="opt" id="opt3"> <label for="opt3"> Biasa</label>
+                                <input type="radio" name="opt" id="opt4"> <label for="opt4"> Kurang</label>
+                                <input type="submit" name="submit" value="Submit" class="btn btn-warning btn-custom">
+                            </form>
                         </div>
 
                         <div class="content-title"><i class="fa fa-bullhorn "></i> Pengumuman</div>
@@ -148,7 +154,7 @@
                         <div class="list-item-2">
                             <ul class="content-container ">
                                 <li><a href="<?= base_url()?>permintaan-data"><img alt="image" src="<?= base_url()?>assets/images/logo/permintaan-data.png"></a></li>
-                                <li><a href=""><img alt="image" src="<?= base_url()?>assets/images/logo/pengaduan.png"></a></li>
+                                <li><a href="<?= base_url()?>layanan-publik/saran-pengaduan"><img alt="image" src="<?= base_url()?>assets/images/logo/pengaduan.png"></a></li>
                             </ul>
                         </div>                        
                         <div class="poster">

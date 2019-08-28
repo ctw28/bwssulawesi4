@@ -12,7 +12,7 @@ class Publikasi extends CI_Controller {
 	{
 		$isi['content'] = 'publikasi/publikasi-berita';
 		$isi['sidebar'] = 'sidebar/sidebar-publikasi';
-		$dataPerPage = 10;
+		$dataPerPage = 12;
 
 		if(empty($this->uri->segment(4))){			
 			$page = 1;
@@ -30,6 +30,7 @@ class Publikasi extends CI_Controller {
 		foreach ($isi['newsList'] -> result() as $row) {
 			$row->newsUrl = $this->newsUrl($row->judul_berita);
             $row->newsText = substr($row->isi_berita,0, 250);
+			$row->newsDate = $this->ChangeIndonesiaFormat($row->tanggal_publish);
 		}
 		$this->load->view('template', $isi);
 	}
@@ -57,6 +58,17 @@ class Publikasi extends CI_Controller {
         $url = strtolower(str_replace(" ", "-", $trim));
         return $url;
 	}
+    function ChangeIndonesiaFormat($dateTime){
+        $year = date("Y", strtotime($dateTime));
+        $date = date("d", strtotime($dateTime));
+        $day = date("w", strtotime($dateTime));
+        $month = date("n", strtotime($dateTime));
+        $time = date("H:i", strtotime($dateTime));
+        $dayName = array("Minggu","Senin", "Selasa","Rabu", "Kamis","Jumat","Sabtu");
+        $monthName = array("","Jan", "Feb","Mar", "Apr","Mei","Juni","Juli", "Agust","Sept", "Okt","Nov","Des");
+        return $dayName[$day].", ".$date." ". $monthName[$month] ." ". $year." ".$time." WITA";
+    }
+	
 }
 
 /* End of file welcome.php */

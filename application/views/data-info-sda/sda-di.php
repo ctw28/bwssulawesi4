@@ -1,4 +1,3 @@
-<div class="col-12">
     <h2>Data Daerah Irigasi</h2>
     <?= "Terakhir update ". $last_update;?>
     <div class="row">
@@ -55,4 +54,3 @@
             </tr>
         </tfoot>
     </table>
-</div>

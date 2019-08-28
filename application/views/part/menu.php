@@ -23,8 +23,8 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Data Informasi SDA</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="<?= base_url()?>data-info-sda">Data Infrastruktur</a>
-                                <a class="dropdown-item" href="<?= base_url()?>">Peta Sumber Daya Air</a>
+                                <a class="dropdown-item" href="<?= base_url()?>data-info-sda">Data Sumber Daya Air</a>
+                                <a class="dropdown-item" href="<?= base_url()?>data-info-sda/peta-ws-sultra">Peta Sumber Daya Air</a>
                             </div>
                         </li>
 
@@ -46,7 +46,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layanan Publik</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="<?= base_url()?>">Saran dan Pengaduan</a>
+                                <a class="dropdown-item" href="<?= base_url()?>layanan-publik/saran-pengaduan">Saran dan Pengaduan</a>
                                 <a class="dropdown-item" href="<?= base_url()?>permintaan-data">Permintaan Data</a>
                             </div>
                         </li>

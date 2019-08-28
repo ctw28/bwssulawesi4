@@ -61,6 +61,11 @@ class Model_web extends CI_model {
 		$data="SELECT * FROM t_galeri_video ORDER BY tgl_upload DESC";
 		return $this->db->query($data);
 	}
+	public function showVideosByLimit($limit)
+	{
+		$data="SELECT * FROM t_galeri_video ORDER BY tgl_upload DESC LIMIT $limit";
+		return $this->db->query($data);
+	}
 	// AGENDA //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public function agenda()

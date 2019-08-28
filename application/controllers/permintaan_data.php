@@ -10,19 +10,19 @@ class Permintaan_data extends CI_Controller {
 	}
 	public function index()
 	{
-		$isi['content'] = 'permintaan-data/permintaan-data-manual';
+		$isi['content'] = 'layanan/permintaan-data-manual';
 		$isi['sidebar'] = 'sidebar/sidebar-permintaan-data';
 		$this->load->view('template', $isi);		
 	}	
 	public function online()
 	{
-		$isi['content'] = 'permintaan-data/permintaan-data-online';
+		$isi['content'] = 'layanan/permintaan-data-online';
 		$isi['sidebar'] = 'sidebar/sidebar-permintaan-data';
 		$this->load->view('template', $isi);		
 	}
 	public function manual()
 	{
-		$isi['content'] = 'permintaan-data/permintaan-data-manual';
+		$isi['content'] = 'layanan/permintaan-data-manual';
 		$isi['sidebar'] = 'sidebar/sidebar-permintaan-data';
 		$this->load->view('template', $isi);		
 	}	
