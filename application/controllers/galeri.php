@@ -12,7 +12,7 @@ class Galeri extends CI_Controller {
 	{
 		if(empty($this->uri->segment(3)))
 		{
-			redirect('galeri/foto/infrastruktur');
+			redirect('galeri/foto/kegiatan-balai');
 		}
 		else {
 			$kategori = $this->uri->segment(3);
@@ -55,9 +55,19 @@ class Galeri extends CI_Controller {
 
 	public function video()
 	{
-		$isi['videos'] 	= $this->model_web->showVideos();
 		$isi['content'] = 'galeri/video';
 		$isi['sidebar'] = 'sidebar/sidebar-galeri-video';
+		if(empty($this->uri->segment(3)))
+		{
+			redirect('galeri/video/infrastruktur');
+		}
+		else {
+			$kategori = $this->uri->segment(3);
+		}
+		$isi['videosAlbum']		= $this->model_web->showVideosAlbum($kategori);
+		$isi['albumCount'] 	= $isi['videosAlbum']->num_rows();
+		$isi['sideMenu'] 	= $this->model_web->getGaleriKategoriVideos();
+
 		$this->load->view('template', $isi);
 	}
 }

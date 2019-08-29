@@ -1,5 +1,5 @@
                 <!-- HEADLINE -->
-                <section class="headline mobile-hide">                          
+                <section class="headline">                          
                     <div class="main-news">
                         <img src="<?= base_url()?>assets/images/berita/thumbs/thumb_1000X1000_<?= $main_news->foto ?>" alt="<?= $main_news->judul_berita ?>">
                         <div class="main-news-label">
@@ -7,11 +7,11 @@
                         </div>
                         <div class="main-news-title">
                             <h2><a href="news/<?= urlencode($main_news->seo_title); ?>"><?= $main_news->judul_berita ?></a></h2>
-                            <small><?= $main_news->time_indo ?></small>
+                            <small class="main-news-info"><?= $main_news->time_indo ?></small>
                         </div>
                     </div>
 
-                    <div class="main-videos">
+                    <div class="main-videos mobile-hide">
                         <div class="video-main-1">
                             <a data-fancybox href="<?= $videos['videoEmbed'][0] ?>">
                                 <div class="play"></div>
@@ -34,15 +34,6 @@
             	<?= $this->load->view('part/support-section');?>
                 
 				<!-- BERITA BWS -->
-
-
-
-
-
-
-
-
-
                 <section>
                     <div class="content-title"><i class="fa fa-list"></i> Berita BWS Sulawesi IV Kendari
                         <a class="pull-right" href="<?= base_url()?>publikasi/berita">Lihat Semua <i class="fa fa-angle-double-right "></i></a>
@@ -64,7 +55,7 @@
                 </section>
 
                 <!-- BERITA PUPR -->
-                <section>
+                <section class="mobile-hide">
                     <div class="content-title"><i class="fa fa-list"></i> Berita Kementerian PUPR
                         <a class="pull-right" href="#">Lihat Semua <i class="fa fa-angle-double-right "></i></a>
                     </div>
@@ -85,16 +76,10 @@
                 </section>
 
 
-                
-
-
-
-
-
-
 				<section>
-                    <div class="container-1 mobile-hide">
-                        
+                    <div class="container-1">
+                        <div class="mobile-hide">
+                            
                         <div class="content-title"><i class="fa fa-bullseye "></i> Poling</div>
                         <div class="content-container poling">
                             <form action="">                            
@@ -105,6 +90,7 @@
                                 <input type="radio" name="opt" id="opt4"> <label for="opt4"> Kurang</label>
                                 <input type="submit" name="submit" value="Submit" class="btn btn-warning btn-custom">
                             </form>
+                        </div>
                         </div>
 
                         <div class="content-title"><i class="fa fa-bullhorn "></i> Pengumuman</div>
@@ -134,6 +120,16 @@
                     </div>
 
                     <div class="container-2">
+
+                        <div class="content-title"><i class="fa fa-bookmark "></i> Temukan Kami</div>
+                        <div class="content-container">
+                            <div class="social-media-container mobile-hide">
+                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="#" class="fa fa-youtube-play"></a>
+                                <a href="#" class="fa fa-instagram"></a>
+                            </div>
+                        </div>
                         <div class="content-title"><i class="fa fa-bookmark "></i> Events</div>
                         <?php foreach ($agenda->result() as $row) { ?>
                             <div class="content-container event-item">
@@ -149,7 +145,7 @@
                         </div>
                     </div>
 
-                    <div class="container-3 mobile-hide">
+                    <div class="container-3">
                         <div class="content-title"><i class="fa fa-user-circle-o"></i> Layanan</div>
                         <div class="list-item-2">
                             <ul class="content-container ">

@@ -1,5 +1,5 @@
 <div class="content-title  mobile-hide"><i class="fa fa-list"></i> Berita Terbaru</div>
-<section class="list-container">
+<section class="list-container side-news">
 <div class="content-container mobile-hide">
 	<?php 
         foreach ($terbaru->result() as $row) {                          

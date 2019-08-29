@@ -55,7 +55,16 @@ class Model_web extends CI_model {
 	}
 
 	// VIDEO ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+	public function showVideosAlbum($kategori)
+	{
+		$data="SELECT * FROM t_galeri_kategori tk INNER JOIN t_galeri_video tv ON tk.id_galeri_kategori = tv.id_galeri_kategori WHERE tk.kategori_seo='$kategori' ORDER BY tgl_upload DESC";
+		return $this->db->query($data);
+	}
+	public function getGaleriKategoriVideos()
+	{
+		$data="SELECT nama_kategori, kategori_seo, COUNT(*) as albumCount FROM t_galeri_video tv INNER JOIN t_galeri_kategori tk ON tv.id_galeri_kategori=tk.id_galeri_kategori GROUP BY tv.id_galeri_kategori";
+		return $this->db->query($data);
+	}
 	public function showVideos()
 	{
 		$data="SELECT * FROM t_galeri_video ORDER BY tgl_upload DESC";

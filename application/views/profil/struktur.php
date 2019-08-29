@@ -1,5 +1,7 @@
 <h2>Bagan Struktur Organisasi</h2>
-<img src="<?= base_url() ?>assets/images/struktur/bagan-struktur-organisasi.jpg" alt="struktur-organisasi">
+<a data-fancybox="gallery" href="<?= base_url() ?>assets/images/struktur/bagan-struktur-organisasi.jpg">
+    <img src="<?= base_url() ?>assets/images/struktur/bagan-struktur-organisasi.jpg" alt="struktur-organisasi">
+</a>
 <h2>Detail Struktur Organisasi</h2>
 <div class="col-12">
 	<div class="row">

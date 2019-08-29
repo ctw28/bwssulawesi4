@@ -1,10 +1,8 @@
-<div class="content-title"><i class="fa fa-bullhorn "></i> Galeri Foto</div>
+<div class="content-title"><i class="fa fa-bullhorn "></i> Galeri Video</div>
 <div class="list-item-2">
     <ul class="content-container "> 
-        <li><a href="#"><i class="fa fa-caret-right"></i> Infrastruktur</a></li>
-        <li><a href="#"><i class="fa fa-caret-right"></i> 2017</a></li>
-        <li><a href="#"><i class="fa fa-caret-right"></i> 2018</a></li>
-        <li><a href="#"><i class="fa fa-caret-right"></i> 2019</a></li>
-
+		<?php foreach ($sideMenu->result() as $row) { ?>
+        <li><a href="<?= base_url()?>galeri/video/<?= $row->kategori_seo?>"><i class="fa fa-caret-right"></i> <?= $row->nama_kategori ?> (<?= $row->albumCount ?>)</a></li>
+		<?php } ?>
     </ul>
 </div>

@@ -20,6 +20,7 @@
                                 <a class="dropdown-item" href="<?= base_url()?>profil/lokasi-kantor">Lokasi Kantor</a>
                             </div>
                         </li>
+                       
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Data Informasi SDA</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -66,9 +67,6 @@
                                 <a class="dropdown-item" href="<?= base_url()?>p3a/database-p3a">Database P3A</a>
                                 <a class="dropdown-item" href="<?= base_url()?>p3a/peta-lokasi">Peta Lokasi P3A</a>
                             </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url()?>kontak">Kontak</a>
                         </li>
                     </ul>
                 </div>

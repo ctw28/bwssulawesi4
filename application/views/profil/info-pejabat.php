@@ -6,7 +6,7 @@
 		    	<img class="profil-photo card-img-top" src="<?= base_url()?>assets/images/profil/ka-balai.jpg" alt="kepala-bws-sulawesi-4-kendari.jpg">
 		    		<div style="width: 100%;">
 		    			
-				    	<h5 class="card-text">Kepala BWS Sulawesi IV Kendari <span class="pull-right"><i class="fa fa-facebook"></i> <i class="fa fa-twitter"></i> <i class="fa fa-instagram"></i> </span></h5>
+				    	<h5 class="card-text">Kepala BWS Sulawesi IV Kendari <span class="pull-right mobile-hide "><i class="fa fa-facebook"></i> <i class="fa fa-twitter"></i> <i class="fa fa-instagram"></i> </span></h5>
 				    	<table>
 				    		<tr>
 					    		<td class="profil-items">Nama</td>
@@ -17,7 +17,7 @@
 					    		<td>: 196706021999031004</td>
 					    	</tr>
 					    	<tr>				    		
-					    		<td class="profil-items">Tempat/Tanggal Lahir</td>			    			
+					    		<td class="profil-items">TTL</td>			    			
 					    		<td>: ToliToli, 02 Juni 1967</td>			    			
 				    		</tr>
 				    	</table>
@@ -38,7 +38,7 @@
 		    	<img class="profil-photo card-img-top" src="<?= base_url()?>assets/images/profil/kasubbag.jpg" alt="kepala-bws-sulawesi-4-kendari.jpg">
 		    		<div style="width: 100%;">
 		    			
-				    	<h5 class="card-text">Kasubbag Tata Usaha <span class="pull-right"><i class="fa fa-facebook"></i> <i class="fa fa-twitter"></i> <i class="fa fa-instagram"></i> </span></h5>
+				    	<h5 class="card-text">Kasubbag Tata Usaha <span class="pull-right mobile-hide"><i class="fa fa-facebook"></i> <i class="fa fa-twitter"></i> <i class="fa fa-instagram"></i> </span></h5>
 				    	<table>
 				    		<tr>
 					    		<td class="profil-items">Nama</td>
@@ -49,7 +49,7 @@
 					    		<td>: 197011022007011002 </td>
 					    	</tr>
 					    	<tr>				    		
-					    		<td class="profil-items">Tempat/Tanggal Lahir</td>			    			
+					    		<td class="profil-items">TTL</td>			    			
 					    		<td>: Gowa, 02 November 1970 </td>			    			
 				    		</tr>
 				    	</table>
@@ -68,7 +68,7 @@
 		    	<img class="profil-photo card-img-top" src="<?= base_url()?>assets/images/profil/hartina.jpg" alt="kepala-bws-sulawesi-4-kendari.jpg">
 		    		<div style="width: 100%;">
 		    			
-				    	<h5 class="card-text">Kepala Seksi Perencanaan dan Program <span class="pull-right"><i class="fa fa-facebook"></i> <i class="fa fa-twitter"></i> <i class="fa fa-instagram"></i> </span></h5>
+				    	<h5 class="card-text">Kepala Seksi Perencanaan dan Program <span class="pull-right mobile-hide"><i class="fa fa-facebook"></i> <i class="fa fa-twitter"></i> <i class="fa fa-instagram"></i> </span></h5>
 				    	<table>
 				    		<tr>
 					    		<td class="profil-items">Nama</td>
@@ -79,7 +79,7 @@
 					    		<td>: 196806302009112001</td>
 					    	</tr>
 					    	<tr>				    		
-					    		<td class="profil-items">Tempat/Tanggal Lahir</td>			    			
+					    		<td class="profil-items">TTL</td>			    			
 					    		<td>: Kendari, 30 Juni 1968</td>			    			
 				    		</tr>
 				    	</table>
@@ -99,7 +99,7 @@
 		    	<img class="profil-photo card-img-top" src="<?= base_url()?>assets/images/profil/seksi-pelaksanaan.jpg" alt="seksi-pelaksanaan.jpg">
 		    		<div style="width: 100%;">
 		    			
-				    	<h5 class="card-text">Kepala Seksi Pelaksanaan <span class="pull-right"><i class="fa fa-facebook"></i> <i class="fa fa-twitter"></i> <i class="fa fa-instagram"></i> </span></h5>
+				    	<h5 class="card-text">Kepala Seksi Pelaksanaan <span class="pull-right mobile-hide"><i class="fa fa-facebook"></i> <i class="fa fa-twitter"></i> <i class="fa fa-instagram"></i> </span></h5>
 				    	<table>
 				    		<tr>
 					    		<td class="profil-items">Nama</td>
@@ -110,7 +110,7 @@
 					    		<td>: 196310252002121002</td>
 					    	</tr>
 					    	<tr>				    		
-					    		<td class="profil-items">Tempat/Tanggal Lahir</td>			    			
+					    		<td class="profil-items">TTL</td>			    			
 					    		<td>: Jember, 25 Oktober 1963</td>			    			
 				    		</tr>
 				    	</table>
@@ -129,7 +129,7 @@
 		    	<img class="profil-photo card-img-top" src="<?= base_url()?>assets/images/profil/seksi-op.jpg" alt="seksi-op.jpg">
 		    		<div style="width: 100%;">
 		    			
-				    	<h5 class="card-text">Kepala Seksi O & P <span class="pull-right"><i class="fa fa-facebook"></i> <i class="fa fa-twitter"></i> <i class="fa fa-instagram"></i> </span></h5>
+				    	<h5 class="card-text">Kepala Seksi O & P <span class="pull-right mobile-hide"><i class="fa fa-facebook"></i> <i class="fa fa-twitter"></i> <i class="fa fa-instagram"></i> </span></h5>
 				    	<table>
 				    		<tr>
 					    		<td class="profil-items">Nama</td>
@@ -140,7 +140,7 @@
 					    		<td>: 197609092009112002</td>
 					    	</tr>
 					    	<tr>				    		
-					    		<td class="profil-items">Tempat/Tanggal Lahir</td>			    			
+					    		<td class="profil-items">TTL</td>			    			
 					    		<td>: Kendari, 09 September 1967</td>			    			
 				    		</tr>
 				    	</table>

@@ -1,25 +1,27 @@
                     <div class="footer">
-                        <div class="col-4 col-12 address" style="width: 100%">
+                        <div class="col-sm-4 col-12">
                             <h3>Alamat Kantor</h3>
                             <address>
-                                  <div>BWS Sulawesi IV Kendari<br>Jalan Balai Kota IV No. 01 Kendari<br>Sulawesi Tenggara</div>
+                                  <div><strong>BWS SULAWESI IV KENDARI</strong><br>Jalan Balai Kota IV No. 01 Kendari<br>Sulawesi Tenggara</div>
                                 <div><i class="fa fa-phone"></i>Fax: (+62401) 3122818, Telp: (+62401) 3122818</div>
                                 <div><i class="fa fa-envelope-o"></i>sisdasulawesi4@gmail.com</div>
                             </address>                                         
                         </div>                        
-                        <div class="col-4 address mobile-hide">
+                        <div class="col-5 mobile-hide" >
                             <h3>Situs Terkait</h3>
-                            <address>
-                                <div>Kementerian Pekerjaan Umum dan Perumahan Rakyat</div>
-                                <div>Ditjen SDA</div>
+                            <ul>
+                                <li><a href="http://pu.go.id/">Kementerian Pekerjaan Umum dan Perumahan Rakyat</a></li>
+                                <li><a href="http://sda.pu.go.id/">Ditjen SDA</a></li>
+                                <li><a href="https://www.bmkg.go.id/">BMKG</a></li>
+                            </ul>
                             </address>                                         
                         </div>                        
-                        <div class="col-4 address mobile-hide">
+                        <div class="col-3 mobile-hide">
                             <h3>Navigasi</h3>
-                            <address>
-                                <div>Site Map</div>
-                                <div>FAQ</div>
-                            </address>                                         
+                            <ul>
+                                <li><a href="<?= base_url()?>site-map">Site Map</a></li>
+                                <li><a href="<?= base_url()?>faq">FAQ</a></li>
+                            </ul>
                         </div>                        
                     </div>
 

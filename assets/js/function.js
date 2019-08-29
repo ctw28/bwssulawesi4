@@ -1,4 +1,6 @@
       $(document).ready(function() {
+
+        
           clockUpdate();
           setInterval(clockUpdate, 1000);
 
@@ -32,3 +34,4 @@
 
           $('.real-time').text(todayDate + ' | ' + h + ':' + m + ':' + s)
       }
+

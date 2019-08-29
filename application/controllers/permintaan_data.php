@@ -29,9 +29,9 @@ class Permintaan_data extends CI_Controller {
 	public function panduan()
 	{
 		$this->load->model('model_web');
-		$isi['content'] = 'permintaan-panduan';
-		$isi['pemberitahuan'] = $this->model_web->pemberitahuan();
-		$this->load->view('template-galeri', $isi);		
+		$isi['content'] = 'layanan/permintaan-panduan';
+		$isi['sidebar'] = 'sidebar/sidebar-permintaan-data';
+		$this->load->view('template', $isi);		
 	}	
 	
 	public function pengkodean(){
@@ -47,9 +47,9 @@ class Permintaan_data extends CI_Controller {
 
 	public function form_permintaan_data()
 	{
-		$isi['content'] = 'permintaan-form';
+		$isi['content'] = 'layanan/permintaan-form';
+		$isi['sidebar'] = 'sidebar/sidebar-permintaan-data';
 		$this->load->model('model_web');
-		$isi['pemberitahuan'] = $this->model_web->pemberitahuan();		
 		$isi['nama'] ='';
 		$isi['instansi'] = '';
 		$isi['nama_peminta'] = '';
@@ -58,7 +58,7 @@ class Permintaan_data extends CI_Controller {
 		$isi['tujuan'] = '';
 		$isi['pekerjaan'] = '';
 		$isi['deskripsi'] = '';
-		$this->load->view('template-galeri', $isi);		
+		$this->load->view('template', $isi);		
 	}	
 
 	public function poling_kepuasan()
@@ -88,15 +88,15 @@ class Permintaan_data extends CI_Controller {
 			$kode_permintaan .= $characters[$rand];
 		}
 		// echo $str;
-		// $data['email'] = mysql_real_escape_string($this->input->post('email'));
-		// $data['no_telp'] = mysql_real_escape_string($this->input->post('telp'));
-		$data['instansi'] = mysql_real_escape_string($this->input->post('instansi'));
-		$data['nama_peminta'] = mysql_real_escape_string($this->input->post('nama'));
-		$data['email'] = mysql_real_escape_string($this->input->post('email'));
-		$data['no_telp'] = mysql_real_escape_string($this->input->post('telp'));
-		$data['tujuan'] = mysql_real_escape_string($this->input->post('tujuan'));
-		$data['pekerjaan'] = mysql_real_escape_string($this->input->post('pekerjaan'));
-		$data['deskripsi'] = mysql_real_escape_string($this->input->post('deskripsi'));
+		// $data['email'] = $this->input->post('email'));
+		// $data['no_telp'] = $this->input->post('telp'));
+		$data['instansi'] = $this->input->post('instansi');
+		$data['nama_peminta'] = $this->input->post('nama');
+		$data['email'] = $this->input->post('email');
+		$data['no_telp'] = $this->input->post('telp');
+		$data['tujuan'] = $this->input->post('tujuan');
+		$data['pekerjaan'] = $this->input->post('pekerjaan');
+		$data['deskripsi'] = $this->input->post('deskripsi');
 		$data['kode_permintaan'] = $kode_permintaan;
 
 		$config = Array('protocol' => 'smtp','smtp_host' => 'ssl://smtp.googlemail.com','smtp_port' => 465,'smtp_user' => 'mbandrigo@gmail.com','smtp_pass' => 'changetheworld28',);
@@ -179,7 +179,7 @@ curl_close($curlHandle);
 		$type = explode('.', $_FILES["userfile"]["name"]);
 		$type = strtolower($type[count($type)-1]);
 		$maxsize = 1024 * 5000; // maksimal 200 KB (1KB = 1024 Byte)
-        $url = "./assets/file_upload/permintaan/".array_pop(array_reverse(explode(".", $_FILES["userfile"]["name"]))).'.'.$type;
+        $url = "./assets/document/permintaan/".array_pop(array_reverse(explode(".", $_FILES["userfile"]["name"]))).'.'.$type;
         if($_FILES['userfile']['size']>$maxsize OR $_FILES['userfile']['size']==0){
 		    return ""; 
         }
@@ -196,24 +196,22 @@ curl_close($curlHandle);
 	}
 	public function sukses()
 	{
-		$isi['content'] = 'permintaan-sukses';
-		$this->load->model('model_web');
-		$isi['pemberitahuan'] = $this->model_web->pemberitahuan();		
+		$isi['content'] = 'layanan/permintaan-sukses';
+		$isi['sidebar'] = 'sidebar/sidebar-permintaan-data';
 
-		$this->load->view('template-galeri', $isi);		
+		$this->load->view('template', $isi);		
 	}	
 
 	public function status()
 	{
 		session_start();
-		$isi['content'] = 'permintaan-status';
-		$this->load->model('model_web');
-		$isi['pemberitahuan'] = $this->model_web->pemberitahuan();		
+		$isi['content'] = 'layanan/permintaan-status';
+		$isi['sidebar'] = 'sidebar/sidebar-permintaan-data';
 		$_SESSION['kode'] = $this->input->post('kode_permintaan');
 		$isi['data_status'] = $this->model_web->permintaan_status($_SESSION['kode']);	
 
 		if($isi['data_status']->num_rows()>0){
-			$this->load->view('template-galeri', $isi);		
+			$this->load->view('template', $isi);		
 		}	
 		else{
 		    $this->session->set_flashdata('info', 'Maaf, kode permintaan yang anda masukkan tidak terdaftar');

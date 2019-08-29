@@ -16,12 +16,12 @@
             </div>
         </div>
     </div>    
-    <table id="demo-foo-filtering" class="table table-striped toggle-circle m-b-0" data-page-size="20" >
+    <table id="demo-foo-filtering" class="table table-striped toggle-circle m-b-0" data-page-size="50" >
         <thead>
-            <tr >
-                <th data-toggle="true"  data-sort-ignore="true">No.</th>
-                <th data-hide="phone, tablet"  data-sort-ignore="true">Nama DI</th>
-                <th  data-sort-ignore="true">Nama P3A</th>
+            <tr>
+                <th data-toggle="true" data-sort-ignore="true">No.</th>
+                <th data-sort-ignore="true" >Nama P3A</th>
+                <th data-hide="phone, tablet" data-sort-ignore="true">Nama DI</th>
                 <th data-hide="phone"  data-sort-ignore="true">Desa</th>
                 <th data-hide="phone"  data-sort-ignore="true">Kecamatan</th>
                 <th data-hide="phone"  data-sort-ignore="true">Kabupaten</th>
@@ -53,8 +53,8 @@
                 ?>
                 >
                     <td ><?php echo $i ?></td>
-                    <td><?php echo $row->nama_di ?></td>
                     <td><?php echo $row->nama_p3a ?></td>
+                    <td><?php echo $row->nama_di ?></td>
                     <td><?php echo $row->desa ?></td>
                     <td><?php echo $row->kecamatan ?></td>
                     <td><?php echo $row->kabupaten ?></td>

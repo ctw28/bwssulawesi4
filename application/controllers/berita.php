@@ -12,7 +12,12 @@ class Berita extends CI_Controller {
 	{
 		$isi['content'] = 'error-404.php';
 		$isi['sidebar'] = 'sidebar/sidebar-news';
-		$isi['terbaru']	= $this->model_web->berita_terbaru();;
+		$isi['terbaru']=$this->model_web->news();
+		foreach ($isi['terbaru'] -> result() as $row) {
+			$row->newsUrl = $this->newsUrl($row->judul_berita);
+			$row->newsDate = $this->ChangeIndonesiaFormat($row->tanggal_publish,'');
+            $row->newsTitle = substr($row->judul_berita,0, 25);
+		}
 		$this->load->view('template', $isi);
 	}
 	public function selengkapnya()

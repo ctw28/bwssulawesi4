@@ -40,7 +40,7 @@ class Data_informasi_sda extends CI_Controller {
 	
 	public function di()
 	{
-        $file = "assets/file_upload/data_sda/di.csv";
+        $file = "assets/document/data_sda/di.csv";
         $i=0;
         $startRowData = 0;
         ini_set("auto_detect_line_endings", 1);
