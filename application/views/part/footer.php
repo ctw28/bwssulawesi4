@@ -1,5 +1,5 @@
                     <div class="footer">
-                        <div class="address">
+                        <div class="col-4 col-12 address" style="width: 100%">
                             <h3>Alamat Kantor</h3>
                             <address>
                                   <div>BWS Sulawesi IV Kendari<br>Jalan Balai Kota IV No. 01 Kendari<br>Sulawesi Tenggara</div>
@@ -7,14 +7,14 @@
                                 <div><i class="fa fa-envelope-o"></i>sisdasulawesi4@gmail.com</div>
                             </address>                                         
                         </div>                        
-                        <div class="address">
+                        <div class="col-4 address mobile-hide">
                             <h3>Situs Terkait</h3>
                             <address>
                                 <div>Kementerian Pekerjaan Umum dan Perumahan Rakyat</div>
                                 <div>Ditjen SDA</div>
                             </address>                                         
                         </div>                        
-                        <div class="address">
+                        <div class="col-4 address mobile-hide">
                             <h3>Navigasi</h3>
                             <address>
                                 <div>Site Map</div>

@@ -1,5 +1,9 @@
 <div class="col-12">
 	<h2>Peta Sebaran Infrastruktur</h2>
+	<div class="share">
+		<span>Bagikan : </span>
+		<div class="sharethis-inline-share-buttons"></div>
+	</div>
 	<div class="row">
 		<div class="col-md-4 col-sm-4 col-6" style="margin-bottom: 2%;">
 	    <a data-fancybox href="<?= base_url()?>assets/images/peta/infrastruktur/peta-sebaran-lokasi-bendung.jpg">
@@ -43,5 +47,4 @@
 		</div>
 	</div>
 </div>
-<p>Bagikan : </p>
-<div class="sharethis-inline-share-buttons"></div>
+

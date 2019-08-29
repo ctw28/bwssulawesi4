@@ -33,19 +33,19 @@ class Berita extends CI_Controller {
 		else if($query->num_rows()>0){
 			foreach ($query -> result() as $row) {
 				$isi['judul'] = $row->judul_berita;
-				$isi['tanggal'] = $row->tanggal_publish;
+				$isi['tanggal'] = $this->ChangeIndonesiaFormat($row->tanggal_publish, 'full');
 				$isi['isi'] = $row->isi_berita;
 				$isi['foto'] = $row->foto;
 				$isi['kategori'] = $row->id_kategori;
-				$isi['klik'] = 10;			
+				$isi['klik'] = $row->klik;			
 				$isi['oleh'] = $row->by;			
 			}
 		}
 		$isi['terbaru']=$this->model_web->news();
 		foreach ($isi['terbaru'] -> result() as $row) {
 			$row->newsUrl = $this->newsUrl($row->judul_berita);
-			$row->newsDate = $this->ChangeIndonesiaFormat($row->tanggal_publish);
-            $row->newsTitle = substr($row->judul_berita,0, 15);
+			$row->newsDate = $this->ChangeIndonesiaFormat($row->tanggal_publish,'');
+            $row->newsTitle = substr($row->judul_berita,0, 25);
 		}
 		$isi['foto_lain']=$this->model_web->berita_foto_lainnya($id);
 		$isi['title'] = ucwords($key);
@@ -65,7 +65,7 @@ class Berita extends CI_Controller {
         return implode(" ",array_splice($words,0,$word_limit));
     }
 
-    function ChangeIndonesiaFormat($dateTime){
+    function ChangeIndonesiaFormat($dateTime, $fullDateTime){
         $year = date("Y", strtotime($dateTime));
         $date = date("d", strtotime($dateTime));
         $day = date("w", strtotime($dateTime));
@@ -73,7 +73,12 @@ class Berita extends CI_Controller {
         $time = date("H:i", strtotime($dateTime));
         $dayName = array("Minggu","Senin", "Selasa","Rabu", "Kamis","Jumat","Sabtu");
         $monthName = array("","Jan", "Feb","Mar", "Apr","Mei","Juni","Juli", "Agust","Sept", "Okt","Nov","Des");
+        if($fullDateTime=='full')
         return $dayName[$day].", ".$date." ". $monthName[$month] ." ". $year." ".$time." WITA";
+    	else
+        return $dayName[$day].", ".$date." ". $monthName[$month] ." ". $year;
+
+
     }
 
 

@@ -1,5 +1,9 @@
 <div class="col-12">
 	<h2>Peta WS Kewenangan Pusat</h2>
+	<div class="share">
+		<span>Bagikan : </span>
+		<div class="sharethis-inline-share-buttons"></div>
+	</div>
 	<div class="row">
 		<div class="col-6" style="margin-bottom: 2%;">
 	    <a data-fancybox href="<?= base_url()?>assets/images/peta/ws/peta-ws-lasolo-konaweha.jpg">
@@ -23,5 +27,3 @@
 		</div>
 	</div>
 </div>
-<p>Bagikan : </p>
-<div class="sharethis-inline-share-buttons"></div>

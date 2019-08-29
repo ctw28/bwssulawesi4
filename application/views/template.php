@@ -24,7 +24,7 @@
             <?= $this->load->view('part/support-section');?>
             <div class="col-12 content">
             	  <div class="row">            		
-                		<div class="col-md-3 col-sm-12 mobile-hide">
+                		<div class="col-md-3 col-sm-12 sidebar">
     	            		  <?= $this->load->view($sidebar);?>
                 		</div>
                 		<div class="col-md-9 col-sm-12 show-content">

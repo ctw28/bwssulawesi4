@@ -1,26 +1,18 @@
-<?php 
-  $tahun = date("Y", strtotime($tanggal));
-  $tanggal2 = date("d", strtotime($tanggal));
-  $day_name = date("w", strtotime($tanggal));
-  $moon = date("n", strtotime($tanggal));
-  $waktu = date("H:i", strtotime($tanggal));
-
-  $hari = array("Minggu","Senin", "Selasa","Rabu", "Kamis","Jumat","Sabtu");
-  $bulan2 = array("","Januari", "Februari","Maret", "April","Mei","Juni","Juli", "Agustus","September", "Oktober","November","Desember");
-  $publish_time = $hari[$day_name].", ".$tanggal2." ". $bulan2[$moon] ." ". $tahun." ".$waktu." WITA";
-?>
-
 <article>
 	<h2 class="news-title"><?= $judul; ?></h2>
 	<div class="news-info">
-		<div class="news-info-item"><i class="fa fa-clock-o"></i><span><?= $publish_time ?></span></div>
-		<div class="news-info-item"><i class="fa fa-user" ></i><span>Sisda</span></div>
-		<div class="news-info-item"><i class="fa fa-eye"></i><span><?= $klik ?> Kali dilihat</span></div>
+		<div class="news-info-item"><i class="fa fa-clock-o"></i><span><?= $tanggal ?></span></div>
+		<div class="news-info-item mobile-hide"><i class="fa fa-user" ></i><span>Sisda</span></div>
+		<div class="news-info-item mobile-hide"><i class="fa fa-eye"></i><span><?= $klik ?> Kali dilihat</span></div>
 	</div>
-	<div class="sharethis-inline-share-buttons"></div>
+	<div class="share">
+		<span>Bagikan : </span>
+		<div class="sharethis-inline-share-buttons"></div>
+	</div>
+
 	<!-- <hr> -->
 
-	<img alt="<?= $judul; ?>" src="<?= base_url()?>assets/images/berita/thumbs/thumb_1000X1000_<?= $foto ?>" style="width:100%; margin:10px 0 15px 0;">
+	<img alt="<?= $judul; ?>" src="<?= base_url()?>assets/images/berita/thumbs/thumb_1000X1000_<?= $foto ?>">
 		
 	<section>
 	<?php

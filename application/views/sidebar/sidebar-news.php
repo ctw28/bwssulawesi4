@@ -1,6 +1,6 @@
-<div class="content-title"><i class="fa fa-list"></i> Berita Terbaru</div>
+<div class="content-title  mobile-hide"><i class="fa fa-list"></i> Berita Terbaru</div>
 <section class="list-container">
-<div class="content-container" style="padding: 10px;">
+<div class="content-container mobile-hide">
 	<?php 
         foreach ($terbaru->result() as $row) {                          
     ?>
@@ -15,7 +15,7 @@
     <?php } ?> 
 </div>
 </section>
-<div class="container-3">
+<div class="container-3  mobile-hide">
     <div class="poster">
         <img alt="images" src="<?= base_url()?>assets/images/banner.jpg">
     </div>
