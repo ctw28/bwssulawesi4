@@ -1,6 +1,7 @@
-
-<h2 class="judul-section side biru tess">Status Permintaan</h2>
-
+<div class="col-12">
+<h2>Status Permintaan</h2>
+<div class="row">
+  
  <?php 
         foreach ($data_status->result() as $row) {
             $tahun = date("Y", strtotime($row->time));
@@ -13,15 +14,13 @@
             $bulan = array("","Jan", "Feb","Mar", "Apr","Mei","Juni","Juli", "Agust","Sept", "Okt","Nov","Des");
                         
       ?> 
-        <div>
           <p>Nama : <b><?php echo $row->nama_peminta ?></b></p>
           <p>Tanggal Permintaan : <b><?php echo $hari[$day_name].", ".$tanggal." ". $bulan[$moon] ." ". $tahun." ".$waktu." WITA"; ?></b></p>
           <p>Data yang diminta : <b><?php echo $row->deskripsi ?></b></p>
-        </div>
-        <br>
 
-
-      <table class="tabel-data" style="text-align:center;">
+    <div style="overflow-x: auto;">
+  
+      <table class="status-table">
         <thead>
           <th>Progres</th>
           <th>Status</th>
@@ -84,9 +83,9 @@
               <?php if($row->status=="Selesai" && $row->total_download==0)
                 echo "<a href='' data-toggle='modal' data-target='#poling' class='btn btn-success'>Download Data</a>";
                 else if( $row->status=="Selesai" && $row->total_download>0)
-                echo "<a href='download_data' class='btn btn-success'>Download Data</a>";
+                echo "<a href='download_data' class='btn btn-success btn-custom'>Download Data</a>";
                 else
-                echo "<a href='' class='btn btn-danger disabled'>Download Data</a>";
+                echo "<a href='' class='btn btn-warning btn-custom'>Download Data</a>";
                 ?>              
             </td>
             <td></td>          
@@ -97,10 +96,11 @@
       <?php 
         }
       ?>
-<br><br>
 
+</div>
 
-
+</div>
+</div>
 
 
 <div class="modal fade bs-example-modal-lg " id="poling" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

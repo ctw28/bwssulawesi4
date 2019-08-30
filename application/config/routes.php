@@ -33,6 +33,7 @@ $route['permintaan-data'] = 'permintaan_data';
 $route['permintaan-data/online'] = 'permintaan_data/online'; 
 $route['permintaan-data/manual'] = 'permintaan_data/manual'; 
 $route['layanan-publik/saran-pengaduan'] = 'layanan_publik/saran_pengaduan'; 
+$route['site-map'] = 'site_map'; 
 
 $route['404_override'] = 'notfound';
 $route['translate_uri_dashes'] = FALSE;

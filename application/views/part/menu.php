@@ -33,6 +33,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown7" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publikasi</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="<?= base_url()?>publikasi/berita">Berita</a>
+                                <a class="dropdown-item" href="<?= base_url()?>publikasi/pengumuman">Pengumuman</a>
+                                <a class="dropdown-item" href="<?= base_url()?>publikasi/agenda">Event</a>
                                 <a class="dropdown-item" href="<?= base_url()?>publikasi/buku-tahunan">Buku Tahunan</a>
                                 <a class="dropdown-item" href="<?= base_url()?>publikasi/hidrologi">Publikasi Hidrologi</a>
                                 <a class="dropdown-item" href="<?= base_url()?>publikasi/tkpsda">Publikasi TKPSDA</a>
@@ -47,8 +49,9 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layanan Publik</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="<?= base_url()?>layanan-publik/saran-pengaduan">Saran dan Pengaduan</a>
+                                <a class="dropdown-item" href="<?= base_url()?>produk-hukum">Produk Hukum</a>
                                 <a class="dropdown-item" href="<?= base_url()?>permintaan-data">Permintaan Data</a>
+                                <a class="dropdown-item" href="<?= base_url()?>layanan-publik/saran-pengaduan">Saran dan Pengaduan</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
