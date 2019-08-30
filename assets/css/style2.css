@@ -35,6 +35,9 @@ li{
 	margin-top:5px;
 }
 @media screen and (max-width: 576px) {
+	.nav-item {
+    	padding: 0 15px !important;
+	}
 	.img-logo{
 		width: 200px !important;
 		margin-left: 10px !important;
@@ -58,7 +61,7 @@ li{
 		padding: 0 20px;
 	}
 	.list-item-2, .show-content h2{
-		/*text-align: center;*/
+		flex-basis: 100% !important;
 	}
 	.list-item-2 a{
 		padding: 7px !important;
@@ -115,6 +118,22 @@ li{
 
 /*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px){
+	.container-3{
+		flex-basis: 44% !important;
+	}
+	.container-1{
+		flex-basis: 55% !important;
+	}
+	.container-2{
+		flex-basis: 100% !important;
+	}
+
+	.footer{
+		text-align: center;
+	}
+		.nav-item {
+    	padding: 0 15px !important;
+	}
 	.img-logo{
 		width: 220px !important;
 		margin-left: 10px !important;
@@ -173,7 +192,9 @@ li{
 
 /*// Large devices (desktops, 992px and up)*/
 @media (min-width: 768px) and (max-width: 992px) {
-	.main-news{
+	.nav-item {
+    	padding: 0 15px !important;
+	}	.main-news{
 		flex-basis: 60% !important;
 		height: 250px !important;
 		margin-bottom: 0 !important;
@@ -326,13 +347,23 @@ img{
 
 .nav-item{
 	border-left: 0.01px solid #777;
-	padding: 0 10px;
+	padding: 0 5px;
 }
 .nav-item:nth-last-child(1){
 	border-right: 0.01px solid #777;	
 }
+.navbar-toggler span{
+	border-top: 2px solid white;
+	padding: 5px 0;
+	border-bottom: 2px solid white;
 
-
+}
+.navbar-toggler{
+	color: #FFF !important;
+	font-size: 10pt;
+	font-weight: bold;
+	padding: 13px;
+}
 
 
 /*CONTENT*/
@@ -618,7 +649,7 @@ img{
 .search-area{
 	flex: 4;
 }
-.search-area input{
+.search-area input, .search-area-mobile input{
 	width: 80%;
 	height: 35px;
 	padding: 0 15px;

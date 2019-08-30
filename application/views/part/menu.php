@@ -1,7 +1,8 @@
             <!-- MENU -->
             <nav class="navbar navbar-expand-lg navbar-light main">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+                  <span>MENU</span>
+                  <!-- <span class="navbar-toggler-icon"></span> -->
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -22,6 +23,15 @@
                         </li>
                        
                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown8" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplikasi</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="http://103.122.35.3/pdsda/" target="_blank">PDSDA</a>
+                                <a class="dropdown-item" href="http://sihlsda.sda.pu.go.id/" target="_blank">SIHLSDA</a>
+                                <a class="dropdown-item" href="http://222.124.202.180/web/" target="_blank">E-Programming</a>
+                                <a class="dropdown-item" href="http://itv.pu.go.id/" target="_blank">PUPR TV</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Data Informasi SDA</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="<?= base_url()?>data-info-sda">Data Sumber Daya Air</a>
@@ -33,8 +43,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown7" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publikasi</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="<?= base_url()?>publikasi/berita">Berita</a>
-                                <a class="dropdown-item" href="<?= base_url()?>publikasi/pengumuman">Pengumuman</a>
-                                <a class="dropdown-item" href="<?= base_url()?>publikasi/agenda">Event</a>
+                                <a class="dropdown-item" href="<?= base_url()?>pengumuman">Pengumuman</a>
                                 <a class="dropdown-item" href="<?= base_url()?>publikasi/buku-tahunan">Buku Tahunan</a>
                                 <a class="dropdown-item" href="<?= base_url()?>publikasi/hidrologi">Publikasi Hidrologi</a>
                                 <a class="dropdown-item" href="<?= base_url()?>publikasi/tkpsda">Publikasi TKPSDA</a>
@@ -49,7 +58,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layanan Publik</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="<?= base_url()?>produk-hukum">Produk Hukum</a>
+                                <a class="dropdown-item" href="http://jdih.pu.go.id/" target="_blank">Produk Hukum</a>
                                 <a class="dropdown-item" href="<?= base_url()?>permintaan-data">Permintaan Data</a>
                                 <a class="dropdown-item" href="<?= base_url()?>layanan-publik/saran-pengaduan">Saran dan Pengaduan</a>
                             </div>

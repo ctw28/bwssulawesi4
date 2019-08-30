@@ -20,40 +20,46 @@ class Berita extends CI_Controller {
 		}
 		$this->load->view('template', $isi);
 	}
+
 	public function selengkapnya()
 	{
 		$isi['content'] = 'news/berita-selengkapnya';
 		$isi['sidebar'] = 'sidebar/sidebar-news';
 
-		$isi['pemberitahuan'] = $this->model_web->pemberitahuan();		
-
-		$key = html_entity_decode(str_replace("-", " ", rawurldecode($this->uri->segment(2))));
-
-		$query=$this->db->query("SELECT * FROM t_berita WHERE judul_berita=\"$key\"");
-		$id = 164;
+		$newsTitle = html_entity_decode(str_replace("-", " ", rawurldecode($this->uri->segment(2))));
+		$query = $this->model_web->newsBy($newsTitle);
 
 		if($query->num_rows()==0){
 			redirect('berita');
 		}
 		else if($query->num_rows()>0){
-			foreach ($query -> result() as $row) {
-				$isi['judul'] = $row->judul_berita;
-				$isi['tanggal'] = $this->ChangeIndonesiaFormat($row->tanggal_publish, 'full');
-				$isi['isi'] = $row->isi_berita;
-				$isi['foto'] = $row->foto;
-				$isi['kategori'] = $row->id_kategori;
-				$isi['klik'] = $row->klik;			
-				$isi['oleh'] = $row->by;			
+			foreach ($query->result() as $row) {
+				$newsId = $row->id_berita;
+				$newsTotalViews = $row->klik+1;			
+				$isi['newsTotalViews'] = $newsTotalViews;			
+				$isi['newsTitle'] = $row->judul_berita;
+				$isi['newsDate'] = $this->ChangeIndonesiaFormat($row->tanggal_publish, 'full');
+				$isi['newsText'] = $row->isi_berita;
+				$isi['newsImage'] = $row->foto;
+				$isi['newsChategory'] = $row->id_kategori;
+				$isi['newsPublishBy'] = $row->by;			
 			}
 		}
+		$this->model_web->newsAddViewer($newsId, $newsTotalViews);
 		$isi['terbaru']=$this->model_web->news();
+		$isi['newsPhotosGallery']=$this->model_web->newsPhotosGallery($newsId);
+
 		foreach ($isi['terbaru'] -> result() as $row) {
 			$row->newsUrl = $this->newsUrl($row->judul_berita);
 			$row->newsDate = $this->ChangeIndonesiaFormat($row->tanggal_publish,'');
             $row->newsTitle = substr($row->judul_berita,0, 25);
 		}
-		$isi['foto_lain']=$this->model_web->berita_foto_lainnya($id);
-		$isi['title'] = ucwords($key);
+		$isi['otherNews']=$this->model_web->news(4);
+		foreach ($isi['otherNews'] -> result() as $row) {
+			$row->newsUrl = $this->newsUrl($row->judul_berita);
+			$row->newsDate = $this->ChangeIndonesiaFormat($row->tanggal_publish,'');
+            $row->newsTitle = substr($row->judul_berita,0, 25);
+		}
 		$this->load->view('template', $isi);		
 
 	}	

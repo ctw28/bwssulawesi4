@@ -22,13 +22,19 @@ class Model_web extends CI_model {
 	{
 		return $this->db->query("SELECT * FROM t_berita ORDER BY tanggal_publish DESC LIMIT $limit OFFSET $offset");
 	}
-
-	public function berita_foto_lainnya($id)
-	{
-		return $this->db->query("SELECT * FROM t_berita_foto WHERE id_berita=$id LIMIT 4");
+	public function newsBy($newsTitle){
+		return $this->db->query("SELECT * FROM t_berita WHERE judul_berita = '$newsTitle'");
 	}
 
+	public function newsPhotosGallery($id)
+	{
+		return $this->db->query("SELECT * FROM t_berita_foto WHERE id_berita=$id");
+	}
 
+	public function newsAddViewer($newsId, $addView)
+	{
+		return $this->db->query("UPDATE t_berita SET klik = $addView WHERE id_berita=$newsId");
+	}
 
 
 	//GALERI FOTO HOME
@@ -85,6 +91,11 @@ class Model_web extends CI_model {
 
 	// PENGUMUMAN //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+	public function getPengumumanData()
+	{
+		$data="SELECT * FROM t_pengumuman ORDER BY tgl_pengumuman DESC";
+		return $this->db->query($data);
+	}
 	public function pengumuman()
 	{
 		$data="SELECT * FROM t_pengumuman WHERE tampil='Ya' ORDER BY tgl_pengumuman DESC";

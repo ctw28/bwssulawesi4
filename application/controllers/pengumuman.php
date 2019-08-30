@@ -2,6 +2,19 @@
 
 class Pengumuman extends CI_Controller {
 	
+	public function index()
+	{
+		$isi['content'] = 'publikasi/pengumuman';
+		$isi['sidebar'] = 'sidebar/sidebar-publikasi';
+		$this->load->model('model_web');
+		$isi['terbaru']=$this->model_web->news();
+
+
+		$isi['announcements'] = $this->model_web->getPengumumanData();
+
+		$this->load->view('template', $isi);
+	}
+
 	public function selengkapnya()
 	{
 		$isi['content'] = 'pengumuman';
@@ -9,11 +22,9 @@ class Pengumuman extends CI_Controller {
 		$this->load->model('model_web');
 		$isi['terbaru']=$this->model_web->news();
 
-
 		$key = $this->uri->segment(3);
 		$this->db->where('id_pengumuman', $key);
 		$query = $this->db->get('t_pengumuman');
-
 
 		if($query->num_rows()>0){
 			foreach ($query -> result() as $row) {

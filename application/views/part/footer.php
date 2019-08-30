@@ -1,5 +1,5 @@
                     <div class="footer">
-                        <div class="col-sm-4 col-12">
+                        <div class="col-md-4 col-sm-12 col-12">
                             <h3>Alamat Kantor</h3>
                             <address>
                                   <div><strong>BWS SULAWESI IV KENDARI</strong><br>Jalan Balai Kota IV No. 01 Kendari<br>Sulawesi Tenggara</div>
@@ -10,11 +10,11 @@
                         <div class="col-5 mobile-hide" >
                             <h3>Situs Terkait</h3>
                             <ul>
-                                <li><a href="http://pu.go.id/">Kementerian Pekerjaan Umum dan Perumahan Rakyat</a></li>
-                                <li><a href="http://sda.pu.go.id/">Ditjen SDA</a></li>
-                                <li><a href="https://www.bmkg.go.id/">BMKG</a></li>
+                                <li><a href="http://pu.go.id/" target="_blank">Kementerian Pekerjaan Umum dan Perumahan Rakyat</a></li>
+                                <li><a href="http://sda.pu.go.id/" target="_blank">Ditjen SDA</a></li>
+                                <li><a href="https://lpse.pu.go.id/eproc4" target="_blank">LPSE</a></li>
+                                <li><a href="https://www.bmkg.go.id/" target="_blank">BMKG</a></li>
                             </ul>
-                            </address>                                         
                         </div>                        
                         <div class="col-3 mobile-hide">
                             <h3>Navigasi</h3>

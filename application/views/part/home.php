@@ -102,17 +102,17 @@
                             </ul>
                         </div>
                         
-                        <div class="content-title"><i class="fa fa-book"></i> Publikasi</div>
-                        <div class="publikasi">
-                            <div class="publikasi-item">
+                        <div class="content-title mobile-hide"><i class="fa fa-book"></i> Publikasi</div>
+                        <div class="publikasi ">
+                            <div class="publikasi-item mobile-hide">
                                 <img alt="image" src="<?= base_url()?>assets/images/buletin.jpg">
                                 <p>Buletin</p>
                             </div>
-                            <div class="publikasi-item">
+                            <div class="publikasi-item mobile-hide">
                                 <img alt="image" src="<?= base_url()?>assets/images/pulibkasi-hidrologi.jpg">
                                 <p>Buletin</p>
                             </div>
-                            <div class="publikasi-item">
+                            <div class="publikasi-item mobile-hide">
                                 <img alt="image" src="<?= base_url()?>assets/images/publikasi-hidrologi-2.jpg">
                                 <p>Buletin</p>
                             </div>
@@ -121,7 +121,7 @@
 
                     <div class="container-2">
 
-                        <div class="content-title"><i class="fa fa-bookmark "></i> Temukan Kami</div>
+                        <div class="content-title mobile-hide"><i class="fa fa-bookmark "></i> Temukan Kami</div>
                         <div class="content-container">
                             <div class="social-media-container mobile-hide">
                                 <a href="#" class="fa fa-facebook"></a>
@@ -130,9 +130,9 @@
                                 <a href="#" class="fa fa-instagram"></a>
                             </div>
                         </div>
-                        <div class="content-title"><i class="fa fa-bookmark "></i> Events</div>
+                        <div class="content-title mobile-hide"><i class="fa fa-bookmark "></i> Events</div>
                         <?php foreach ($agenda->result() as $row) { ?>
-                            <div class="content-container event-item">
+                            <div class="content-container event-item mobile-hide">
                                 <h6><?= $row->judul_agenda ?></h6>
                                 <i class="fa fa-map-marker "></i> <?= $row->tempat ?> <br>
                                 <i class="fa fa-calendar"></i> <?= $row->tgl_agenda; ?>  
@@ -153,7 +153,7 @@
                                 <li><a href="<?= base_url()?>layanan-publik/saran-pengaduan"><img alt="image" src="<?= base_url()?>assets/images/logo/pengaduan.png"></a></li>
                             </ul>
                         </div>                        
-                        <div class="poster">
+                        <div class="poster mobile-hide">
                             <img alt="image" src="<?= base_url()?>assets/images/banner.jpg">
                         </div>
                     </div>

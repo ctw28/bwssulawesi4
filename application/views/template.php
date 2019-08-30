@@ -52,7 +52,7 @@
 
     <script>
     $('[data-fancybox]').fancybox({
-      protect: true,
+      protect: false,
     });
     
     $.fancybox.defaults.animationEffect = "zoom-in-out";
